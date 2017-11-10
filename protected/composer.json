@@ -1,0 +1,10 @@
+{
+    "require": {
+        "clevertech/yii-booster": "v4.0.1",
+        "yiiext/imperavi-redactor-widget":"*"
+    },
+    "require-dev": {
+        "zhuravljov/yii2-debug": "^1.4"
+
+    }
+}

@@ -1,0 +1,85 @@
+<?php
+namespace frontend\components;
+
+use CUploadedFile;
+use Yii;
+use yii\base\Behavior;
+/**
+ * Created by PhpStorm.
+ * User: Strafun Dmytro <strafun.web@gmail.com>
+ * Date: 11-Feb-16
+ * Time: 16:36
+ */
+class ImageBehavior extends Behavior
+{
+    public $imagePath = '';
+    const UPLOAD_DIR = 'www/upload/';
+    const UPLOAD_DIRR= '/frontend/www/upload/';
+    const UPLOAD_PATH =  '/upload/';
+    public $imageField = 'image';
+    private  $_prefix = null;
+    
+    //public $project = 'appointment-portal';
+    
+    public static function getImage($id, $imagePath){
+        
+        $image = \Yii::getAlias('@webroot').'/../'.self::UPLOAD_DIR.$imagePath.DIRECTORY_SEPARATOR.$id.'.jpg';
+        
+        if(file_exists($image))
+            return Yii::$app->request->hostInfo.self::UPLOAD_DIRR.$imagePath.DIRECTORY_SEPARATOR.$id.'.jpg?lastmod='.time();
+        else
+            return Yii::$app->request->hostInfo.self::UPLOAD_DIRR.'empty.jpg';
+    }
+
+    private function getPrefix(){
+        if(is_null($this->_prefix)){
+            $this->_prefix = str_replace(['admin.','merchant.'],'',Yii::$app->request->hostInfo);
+        }
+        return $this->_prefix;
+    }
+
+    public function getImagePath(){
+
+      return $this->getPrefix().self::UPLOAD_DIRR.$this->imagePath.DIRECTORY_SEPARATOR.$this->owner->getPrimaryKey().'.jpg';
+    }
+
+    public function getImageUrl(){
+        
+        if(!$this->owner->isNewRecord && file_exists($this->getBaseImagePath()))
+            return $this->getImagePath();
+        else
+            return $this->getPrefix().self::UPLOAD_DIRR.'empty.jpg';
+
+    }
+
+    private function getBaseImagePath(){
+        
+        
+        
+        return    \Yii::getAlias('@webroot').'/../'.self::UPLOAD_DIR.$this->imagePath.DIRECTORY_SEPARATOR.$this->owner->getPrimaryKey().'.jpg';
+    }
+
+    public function beforeValidate($event){
+        
+        $this->owner->{$this->imageField} = \yii\web\UploadedFile::getInstance($this->owner, $this->imageField);
+
+    }
+
+
+    public function afterSave($event){
+        
+        
+        if ($this->owner->{$this->imageField}){
+            $this->owner->{$this->imageField}->saveAs($this->getBaseImagePath());
+        }
+    }
+
+    public function afterDelete($event){
+        if(file_exists($this->getBaseImagePath()))
+        $this->deleteImage();
+    }
+
+    public function deleteImage(){
+        unlink($this->getBaseImagePath());
+    }
+}

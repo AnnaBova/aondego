@@ -1,0 +1,261 @@
+
+<?php
+$session = Yii::$app->session;
+$keyword = $session['keyword'];
+$merchantid = $session['merchant_id'];
+
+if (isset($merchantid)) {
+	$merchant = \frontend\models\MtMerchant::findOne(['merchant_id' => $merchantid]);
+//	echo '<pre>';
+//	print_r($merchant->giftVoucherSetting->attributes);
+//	echo '</pre>';
+}
+?>
+
+
+<!-- Content ================================================== -->
+<div class="container margin_60_35">
+    <div id="container_pin">
+	<div class="row">
+
+	    <?php $form = yii\widgets\ActiveForm::begin(['id' => 'gift-voucher-form']); ?>
+	    
+	    
+
+
+	    <div class="col-md-8">
+		<div class="box_style_2">
+		    <h2 class="inner"><?php echo Yii::t('basicfield', 'Payment methods')?></h2>
+
+		    <?php 
+		    	$field = $form->field($addToCart, 'paymentMethod', ['options' => ['class' => 'form-group']]);
+			$field->template = "{error}";  
+			echo $field->textInput(['maxlength' => 255]);
+		    
+		    if (in_array(2, $merchant->giftVoucherSetting->payment)) { ?>
+			    <div class="payment_select" id="paypal">
+				<label>
+				    
+				    <input type="radio" value="2" name="AddToCart[paymentMethod]" class="icheck payment">
+				    <?php echo Yii::t('basicfield', 'Pay with paypal')?>
+				    <?php //echo $form->field($addToCart, 'paymentMethod')->radio(['class' => 'icheck','value'=> 3, 'label' => 'Pay with paypal'])?>
+				</label>
+			    </div>
+			    <?php
+		    }
+		    if (in_array(1, $merchant->giftVoucherSetting->payment)) {
+			    ?>
+			    <div class="payment_select">
+				<label>
+				    <input type="radio" value="1" name="AddToCart[paymentMethod]" class="icheck payment">
+				    <?php echo Yii::t('basicfield', 'Bank transfer')?>
+				    
+				    <?php //echo $form->field($addToCart, 'paymentMethod')->radio(['class' => 'icheck','value'=> 2, 'label' => 'Bank transfer'])?>
+				    
+				</label>
+				<i class="icon_wallet"></i>
+			    </div>
+
+			<?php
+			}
+			if (in_array(0, $merchant->giftVoucherSetting->payment)) {
+			    ?>
+			    <div class="payment_select nomargin">
+				<label>
+				    
+				    <input type="radio" value="0" name="AddToCart[paymentMethod]" class="icheck payment">
+				    <?php echo Yii::t('basicfield', 'Pay cash on pickup')?>
+				    
+				    <?php //echo $form->field($addToCart, 'paymentMethod')->radio(['class' => 'icheck','value'=> 1, 'label' => 'Pay cash on pickup'])?>
+				    
+				</label>
+				<i class="icon_wallet"></i>
+			    </div>
+			<?php } 
+			
+
+			
+			?>
+		</div><!-- End box_style_1 -->
+		<div class="box_style_2">
+		    <h2 class="inner"><?php echo Yii::t('basicfield', 'Delivery Options')?></h2>
+			<?php 
+			$field = $form->field($addToCart, 'deliveryOption', ['options' => ['class' => 'form-group']]);
+			$field->template = "{error}";  
+			echo $field->textInput(['maxlength' => 255]);
+			
+			if (in_array(0, $merchant->giftVoucherSetting->delivery_options)) { ?>
+			    <div class="payment_select" id="pick-up">
+				<label>
+				    
+				    <input type="radio" value="0" name="AddToCart[deliveryOption]" class="icheck delivery-option">Pick up
+				    <?php //echo $form->field($addToCart, 'deliveryOption')->radio(['class' => 'icheck delivery-option','value'=> 1, 'label' => 'Pick up'])?>
+				</label>
+			    </div>
+
+			<?php } if (in_array(1, $merchant->giftVoucherSetting->delivery_options)) {?>
+		    <div class="payment_select" id="mail">
+			<label>
+			    <input type="radio" value="1" name="AddToCart[deliveryOption]" class="icheck delivery-option">Delivered to billing address
+			    <?php //echo $form->field($addToCart, 'deliveryOption')->radio(['class' => 'icheck delivery-option','value'=> 2, 'label' => 'Delivered to billing address'])?>
+			    
+			</label>
+			<i class="icon_wallet"></i>
+		    </div>
+		    <div class="payment_select nomargin" id="mail">
+
+			<?php echo $this->render('shipping-address', ['model' => $address, 'form' => $form, 'addToCart' => $addToCart]) ?>
+
+		    </div>
+		    
+			<?php }
+			
+			
+			?>
+		</div><!-- End box_style_1 -->
+	    </div><!-- End col-md-6 -->
+
+	    <div class="col-md-4">
+		<div id="cart_box">
+		    <h3>Your Order <i class="icon_cart pull-right"></i></h3>
+				<?php echo $this->render('/order/voucher-cart') ?>
+
+
+		    <hr>					
+		    <table class="table table_summary">
+			<tbody>
+			    <tr>
+				<td>
+				    Subtotal <span class="pull-right">€ 
+
+
+					<?php echo \frontend\components\UrlHelper::numberFormat($session['voucher-subtotal']) ?></span>
+				</td>
+			    </tr>
+			    
+			    <?php 
+			    $shippingFee = 0;
+			    if(in_array(1, $merchant->giftVoucherSetting->delivery_options)){
+				    $shippingFee = $merchant->giftVoucherSetting->delivery_fee;
+				    
+				    echo $form->field($addToCart, 'deliveryFee')->hiddenInput(['value'=> $merchant->giftVoucherSetting->delivery_fee]);
+				    ?>
+			    <tr>
+				<td>
+				    Shipping & Handling Fee <span class="pull-right">€ 
+					
+					<?php echo frontend\components\UrlHelper::numberFormat($merchant->giftVoucherSetting->delivery_fee);?>
+				    </span>
+				</td>
+			    </tr>
+			    <?php }?>
+			    <tr>
+				<td class="total">
+				    TOTAL <span class="pull-right">€ <?php 
+				    $total = $shippingFee + $session['voucher-total'];
+				    echo \frontend\components\UrlHelper::numberFormat($total) ?></span>
+				</td>
+			    </tr>
+			</tbody>
+		    </table>
+		    
+		    <i class="icon-spinner loading" aria-hidden="true" style="display: none"></i>
+		    <button class="btn_full" href="javascript:void(0)" id="proceed-checkout">Proceed to checkout</button>
+		    
+		    <a class="btn_full_outline" href="<?php echo Yii::$app->urlManager->createUrl(['merchant/gift-voucher', 'id' => $merchantUrl]) ?>">
+			<i class="icon-right"></i> Cancel order - back to <?php echo $merchant->service_name;?></a>
+		</div><!-- End cart_box -->
+	    </div><!-- End col-md-3 -->
+<?php yii\widgets\ActiveForm::end(); ?>
+	</div><!-- End row -->
+    </div><!-- End container pin-->
+</div><!-- End container -->
+<!-- End Content =============================================== -->
+<?php 
+
+$paymentUrl  = Yii::$app->urlManager->createUrl('widget/voucher-payment');
+$js = <<<SCRIPT
+	
+	$('.payment').on('ifChecked unChecked', function (){
+		var value = $(this).val();
+		console.log(value);
+	
+		if(value == 0){
+			$('body #mail').hide();
+			$('#pick-up').show();
+			
+		}else{
+			$('body #mail').show();
+			$('#pick-up').hide();
+		}
+	
+	})
+	
+	$('#proceed-checkout').on('click', function(e){
+		e.preventDefault();
+		$('.loading').show();
+		var obj = $(this);
+		obj.prop("disabled",true);
+	
+		$('body .help-block').empty();
+	
+		$.ajax({
+			type : 'post',
+			url : '$url',
+			data : $('#gift-voucher-form').serialize(),
+			dataType : 'json',
+			success  : function(response){
+				
+				if(response.success == true){
+					obj.prop("disabled",false);
+					if(response.payment == 2){
+						window.open(
+							response.data,
+							'_blank' 
+						      );
+					}else{
+						window.location.href = response.data;
+					}
+					
+				
+				}else{
+					$('.loading').hide();
+					obj.prop("disabled",false);
+	
+					$.each(response.message, function(key, val) {
+						if(key == 'paymentMethod') key = 'paymentmethod';
+						if(key == 'deliveryOption') key = 'deliveryoption';
+						
+						console.log($('.field-addtocart-'+key));
+						$('.field-addtocart-'+key).find('.help-block').html(val);
+						$('.field-addtocart-'+key).closest('.form-group').addClass('has-error');
+	
+						$('.field-mtaddressbook-'+key).find('.help-block').html(val);
+						$('.field-mtaddressbook-'+key).closest('.form-group').addClass('has-error');
+					});
+				}
+				
+			}
+		})
+		
+       
+	})
+	
+	
+	$('.delivery-option').on('ifChecked unChecked', function(event){	
+	
+		var value = $(this).val();
+		console.log(value);
+	
+		if(value == 2){
+			$('#collapseOne').show();
+		}else{
+			$('#collapseOne').hide();
+		}
+
+	})
+SCRIPT;
+
+$this->registerJs($js);
+
+?>

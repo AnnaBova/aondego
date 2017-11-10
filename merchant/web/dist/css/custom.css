@@ -1,0 +1,71 @@
+.modal {
+    background: rgba(255,255,255,0.8);
+}
+
+a.btn_4, .btn_4{
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color:#fff;
+	background: #78cfcf;
+	cursor: pointer;
+	padding: 5px 10px;
+	outline: none;
+	font-size:12px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-transform:none;
+	font-weight:600;
+	display:inline-block;
+	text-align:center;
+}
+a.btn_4:hover, .btn_4:hover{
+	background:#167a7b;
+}
+
+.timeslot {
+    padding: 0 0 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.timeslot li {
+    list-style-type: none;
+    display: inline-block;
+    width:20%;
+    text-align: center;
+    margin-top: 5px;
+	
+    font-size:14px;
+    color: #fff;
+	background: #eee;
+	
+}
+
+.timeslot li .active {
+    padding: 5px;
+    background: #78cfcf;
+    color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+	.timeslot li {width: 30%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+	.timeslot li {width: 30%;}
+    .timeslot li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+	 .timeslot li {width:30%;}
+}	
