@@ -83,7 +83,7 @@ return [
                 'merchant/get-subcategory' => 'merchant/get-subcategory',
                 'merchant/delete-order' => 'merchant/delete-order',
                 'merchant/widgetview' => 'merchant/widgetview',
-                'merchant/<id:[a-zA-Z0-9-]+>' => 'merchant/view',
+//                'merchant/<id:[a-zA-Z0-9-]+>' => 'merchant/view',
                 
                  
                 '/<slug:[a-zA-Z0-9-]+>' => 'mt-custom-page/view',

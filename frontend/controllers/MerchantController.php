@@ -962,9 +962,9 @@ class MerchantController extends Controller
         $merchantId = $id;
         $explode = explode('-', $id);
         $id = $explode[count($explode) - 1];
-		
+
 		$model = MtMerchant::findOne(['slug' => $merchantId]);
-		
+
 		if(is_numeric($id)&& count($model) == 0){
 			
 			$model = $this->findModel($id);
@@ -982,9 +982,7 @@ class MerchantController extends Controller
         $appointment = new \frontend\models\Appointment();
         $review = new \frontend\models\MtReview();
         $session['merchant_id'] = $id;
-		
-		
-	
+
 	if(!$model::hasServices($model->id) && $model::hasVoucher($model->id)){
 		
 		return $this->redirect(['gift-voucher', 'id' => $merchantId]);

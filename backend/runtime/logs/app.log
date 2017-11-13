@@ -45495,3 +45495,1373 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1510234827.9429
     'REQUEST_TIME' => 1510234827
 ]
+2017-11-13 10:23:32 [127.0.0.1][-][bjg0i68656sbdcjgldd8dk52n5][error][yii\base\ErrorException:32] yii\base\ErrorException: PHP Startup: Unable to load dynamic library '/usr/lib/php/20151012/php_http.dll' - /usr/lib/php/20151012/php_http.dll: cannot open shared object file: No such file or directory in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-11-13 10:23:32 [127.0.0.1][-][bjg0i68656sbdcjgldd8dk52n5][info][application] $_GET = [
+    'r' => 'login/index'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'Tp1AcqVShJOIn2rTR2OWQkhV0QtVzG-izOfWrkFBjTAH8Hcg4xvK8fDoPoYIDdckO2PnbD-ZNseEk479ODe0aA=='
+    'LoginForm' => [
+        'username' => 'ak@creatingbusiness.de'
+        'password' => 'mimi1234'
+        'rememberMe' => '0'
+    ]
+    'ajax' => 'login-form'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+    'advanced-frontend' => '9lg7gafk83pg8p93k78dmdtqa7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '233'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://work'
+    'HTTP_X_CSRF_TOKEN' => 'Tp1AcqVShJOIn2rTR2OWQkhV0QtVzG-izOfWrkFBjTAH8Hcg4xvK8fDoPoYIDdckO2PnbD-ZNseEk479ODe0aA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://work/backend/web/index.php?r=login%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71; advanced-frontend=9lg7gafk83pg8p93k78dmdtqa7'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '49320'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=login%2Findex'
+    'REQUEST_URI' => '/backend/web/index.php?r=login%2Findex'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568612.279
+    'REQUEST_TIME' => 1510568612
+]
+2017-11-13 10:23:35 [127.0.0.1][-][bjg0i68656sbdcjgldd8dk52n5][error][yii\base\ErrorException:32] yii\base\ErrorException: PHP Startup: Unable to load dynamic library '/usr/lib/php/20151012/php_http.dll' - /usr/lib/php/20151012/php_http.dll: cannot open shared object file: No such file or directory in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-11-13 10:23:35 [127.0.0.1][-][bjg0i68656sbdcjgldd8dk52n5][info][application] $_GET = [
+    'r' => 'login/index'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'Tp1AcqVShJOIn2rTR2OWQkhV0QtVzG-izOfWrkFBjTAH8Hcg4xvK8fDoPoYIDdckO2PnbD-ZNseEk479ODe0aA=='
+    'LoginForm' => [
+        'username' => '**AG-admin** '
+        'password' => 'mimi1234'
+        'rememberMe' => '0'
+    ]
+    'ajax' => 'login-form'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+    'advanced-frontend' => '9lg7gafk83pg8p93k78dmdtqa7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '222'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://work'
+    'HTTP_X_CSRF_TOKEN' => 'Tp1AcqVShJOIn2rTR2OWQkhV0QtVzG-izOfWrkFBjTAH8Hcg4xvK8fDoPoYIDdckO2PnbD-ZNseEk479ODe0aA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://work/backend/web/index.php?r=login%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71; advanced-frontend=9lg7gafk83pg8p93k78dmdtqa7'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '49346'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=login%2Findex'
+    'REQUEST_URI' => '/backend/web/index.php?r=login%2Findex'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568615.084
+    'REQUEST_TIME' => 1510568615
+]
+2017-11-13 10:24:05 [127.0.0.1][-][bjg0i68656sbdcjgldd8dk52n5][error][yii\base\ErrorException:32] yii\base\ErrorException: PHP Startup: Unable to load dynamic library '/usr/lib/php/20151012/php_http.dll' - /usr/lib/php/20151012/php_http.dll: cannot open shared object file: No such file or directory in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2017-11-13 10:24:05 [127.0.0.1][-][bjg0i68656sbdcjgldd8dk52n5][info][application] $_GET = [
+    'r' => 'login/index'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'Tp1AcqVShJOIn2rTR2OWQkhV0QtVzG-izOfWrkFBjTAH8Hcg4xvK8fDoPoYIDdckO2PnbD-ZNseEk479ODe0aA=='
+    'LoginForm' => [
+        'username' => 'AG-admin'
+        'password' => 'ihfa4YOU%'
+        'rememberMe' => '0'
+    ]
+    'ajax' => 'login-form'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+    'advanced-frontend' => '9lg7gafk83pg8p93k78dmdtqa7'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '220'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ORIGIN' => 'http://work'
+    'HTTP_X_CSRF_TOKEN' => 'Tp1AcqVShJOIn2rTR2OWQkhV0QtVzG-izOfWrkFBjTAH8Hcg4xvK8fDoPoYIDdckO2PnbD-ZNseEk479ODe0aA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_REFERER' => 'http://work/backend/web/index.php?r=login%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71; advanced-frontend=9lg7gafk83pg8p93k78dmdtqa7'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '49600'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=login%2Findex'
+    'REQUEST_URI' => '/backend/web/index.php?r=login%2Findex'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568645.039
+    'REQUEST_TIME' => 1510568645
+]
+2017-11-13 10:24:38 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:24:38 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+    'advanced-frontend' => '9lg7gafk83pg8p93k78dmdtqa7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/index.php?r=packages'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71; advanced-frontend=9lg7gafk83pg8p93k78dmdtqa7'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '49880'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568678.125
+    'REQUEST_TIME' => 1510568678
+]
+2017-11-13 10:25:56 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:25:56 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+    'advanced-frontend' => '9lg7gafk83pg8p93k78dmdtqa7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71; advanced-frontend=9lg7gafk83pg8p93k78dmdtqa7'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '50616'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568756.246
+    'REQUEST_TIME' => 1510568756
+]
+2017-11-13 10:26:43 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:26:43 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+    'advanced-frontend' => '9lg7gafk83pg8p93k78dmdtqa7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71; advanced-frontend=9lg7gafk83pg8p93k78dmdtqa7'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '51024'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568803.72
+    'REQUEST_TIME' => 1510568803
+]
+2017-11-13 10:26:44 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:26:44 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+    'advanced-frontend' => '9lg7gafk83pg8p93k78dmdtqa7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71; advanced-frontend=9lg7gafk83pg8p93k78dmdtqa7'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '51034'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568804.238
+    'REQUEST_TIME' => 1510568804
+]
+2017-11-13 10:26:44 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:26:44 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+    'advanced-frontend' => '9lg7gafk83pg8p93k78dmdtqa7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71; advanced-frontend=9lg7gafk83pg8p93k78dmdtqa7'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '51036'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568804.63
+    'REQUEST_TIME' => 1510568804
+]
+2017-11-13 10:26:45 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:26:45 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+    'advanced-frontend' => '9lg7gafk83pg8p93k78dmdtqa7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71; advanced-frontend=9lg7gafk83pg8p93k78dmdtqa7'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '51046'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568805.102
+    'REQUEST_TIME' => 1510568805
+]
+2017-11-13 10:26:45 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:26:45 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+    'advanced-frontend' => '9lg7gafk83pg8p93k78dmdtqa7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71; advanced-frontend=9lg7gafk83pg8p93k78dmdtqa7'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '51048'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568805.287
+    'REQUEST_TIME' => 1510568805
+]
+2017-11-13 10:26:45 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:26:45 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+    'advanced-frontend' => '9lg7gafk83pg8p93k78dmdtqa7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71; advanced-frontend=9lg7gafk83pg8p93k78dmdtqa7'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '51050'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568805.55
+    'REQUEST_TIME' => 1510568805
+]
+2017-11-13 10:26:46 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:26:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+    'advanced-frontend' => '9lg7gafk83pg8p93k78dmdtqa7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71; advanced-frontend=9lg7gafk83pg8p93k78dmdtqa7'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '51060'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568806.013
+    'REQUEST_TIME' => 1510568806
+]
+2017-11-13 10:26:51 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:26:51 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+    'advanced-frontend' => '9lg7gafk83pg8p93k78dmdtqa7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71; advanced-frontend=9lg7gafk83pg8p93k78dmdtqa7'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '51104'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568811.217
+    'REQUEST_TIME' => 1510568811
+]
+2017-11-13 10:26:51 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:26:51 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+    'advanced-frontend' => '9lg7gafk83pg8p93k78dmdtqa7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71; advanced-frontend=9lg7gafk83pg8p93k78dmdtqa7'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '51106'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568811.742
+    'REQUEST_TIME' => 1510568811
+]
+2017-11-13 10:26:57 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:26:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '51158'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568817.08
+    'REQUEST_TIME' => 1510568817
+]
+2017-11-13 10:26:57 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:26:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '51160'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568817.688
+    'REQUEST_TIME' => 1510568817
+]
+2017-11-13 10:26:58 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:26:58 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '51170'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568818.001
+    'REQUEST_TIME' => 1510568818
+]
+2017-11-13 10:27:04 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:27:04 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '51224'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568824.566
+    'REQUEST_TIME' => 1510568824
+]
+2017-11-13 10:27:10 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:27:10 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '51228'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568830.668
+    'REQUEST_TIME' => 1510568830
+]
+2017-11-13 10:27:45 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:27:45 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '51584'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568865.658
+    'REQUEST_TIME' => 1510568865
+]
+2017-11-13 10:27:46 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "site/login". in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#1 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /home/incodepc1/www/aondego/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /home/incodepc1/www/aondego/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /home/incodepc1/www/aondego/backend/web/index.php(20): yii\base\Application->run()
+#2 {main}
+2017-11-13 10:27:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 'eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0='
+    '_csrf-frontend' => 'c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X\";}'
+    'cb-enabled' => 'enabled'
+    '_backendSessionId' => 'bjg0i68656sbdcjgldd8dk52n5'
+    '_merchantSessionId' => 'cc9kmqj5624jhv56f1ndnm0f71'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/backend/web/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'work'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'remember_web_59ba36addc2b2f9401580f014c7f58ea4e30989d=eyJpdiI6IklmUjV3VWxOOFpScEcrOTVLU3FUXC9nPT0iLCJ2YWx1ZSI6ImJtTlZcL1lGMHl0R0FYWWI2RXlxTHljWXN3Q09aeVJ2VlUrU1A3M05HU0lCTkN3V1dvNjQ2Wmh2MzFIRjg4S3dkYlpYQ1lFTXBSNXI4SWkxRXhvUVJjZFdGaXRaMHd4VUU5SmVWd3NkQnpvWT0iLCJtYWMiOiJiOWUxOGU2NmYyOTE2MjcwMjU5M2JjNjk5ZDIxOGE1Y2Q5YjhmMTBkYmJmMDdjY2QzY2YwZjE5MDY0ZDU5NGQyIn0%3D; _csrf-frontend=c1fcb89958a2807c06ec37cffa6445f1343447dc5e2e100207bc00abf5f10e73a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22Im7RFINbxwTUOnAfs66gjUYeHtXSyv9X%22%3B%7D; cb-enabled=enabled; _backendSessionId=bjg0i68656sbdcjgldd8dk52n5; _merchantSessionId=cc9kmqj5624jhv56f1ndnm0f71'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at work Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'work'
+    'SERVER_ADDR' => '127.0.1.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/home/incodepc1/www/aondego'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => '/home/incodepc1/www/aondego/backend/web/index.php'
+    'REMOTE_PORT' => '51588'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/backend/web/index.php'
+    'PHP_SELF' => '/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1510568866.754
+    'REQUEST_TIME' => 1510568866
+]
