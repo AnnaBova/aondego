@@ -73,19 +73,20 @@ if(isset($session['latlang'])){
             <div class="desc">
                 <div class="thumb_strip img-responsive">
                     
-                    <?php $merchantUrl = preg_replace('/\s+/', '',$model['service_name']);
+                    <?php
+                    $merchantUrl = preg_replace('/\s+/', '',$model['service_name']);
                     $merchantUrl = strtolower($merchantUrl).'-'.$model['merchant_id'];
-		    
-		    $url = Yii::$app->urlManager->createUrl(['merchant/view', 'id'=>$merchantUrl]);
-		    
-		    if(!empty($type)){
-			   $url = Yii::$app->urlManager->createUrl(['merchant/gift-voucher', 'id'=>$merchantUrl]); 
-			    
-		    }
+
+		    $view = Yii::$app->urlManager->createUrl(['merchant/view', 'id'=>$merchantUrl]);
+            $merchants_vouchers = Yii::$app->urlManager->createUrl(['merchant/gift-voucher', 'id'=>$merchantUrl]);
+
+//                    if(!empty($type)){
+//
+//		    }
                     
                     //print_r($merchantUrl);exit;
                     ?>
-                    <a href="<?php echo $url;?>">
+                    <a href="<?php echo $view;?>">
                         
                         <?php 
                             echo \yii\helpers\Html::img(\frontend\components\ImageBehavior::getImage($model['merchant_id'], 'merchant'))
@@ -97,7 +98,11 @@ if(isset($session['latlang'])){
                     <?php 
                     
                     $queryRating = 0;
+                    $hasVoucher = 0;
+                    $hasService = 0;
                     if($model['merchant_id']){
+                        $hasService = \common\models\CategoryHasMerchant::find()->where(['merchant_id' => $model['merchant_id']])->count();
+                        $hasVoucher = \common\models\GiftVoucher::find()->where(['merchant_id' => $model['merchant_id']])->count();
                         $ratingSql = 'SELECT ceil(AVG(rating)) as totalrating FROM mt_review where merchant_id='.$model['merchant_id'];
                         $queryRating = Yii::$app->db->createCommand($ratingSql)->queryScalar();
                         
@@ -126,7 +131,7 @@ if(isset($session['latlang'])){
                     }?>
                     (<small><a href="#0"><?php echo $queryRatingCount;?> <?php echo Yii::t('basicfield', 'reviews')?></a></small>)
                 </div>
-                <h3><a href="<?php echo $url;?>">
+                <h3><a href="<?php echo $view;?>">
                     <?php echo $model['service_name'];?></a></h3>
                 <div class="type">
                     
@@ -269,9 +274,15 @@ if(isset($session['latlang'])){
                 </ul>-->
                 <?php }?>
                 <div class="box_style_3">
-                    <p><button class="btn_1" type="button" data-toggle="collapse" data-target="#collapseExample<?php echo $model['merchant_id']?>" aria-expanded="false" aria-controls="collapseExample">
-                            <?php echo Yii::t('basicfield', 'Services & Treatments')?>
-                        </button></p>
+                    <?php
+                    if ($hasVoucher) {
+                    ?>
+                        <p><button class="btn_1" type="button" data-toggle="collapse" data-target="#collapseExample<?php echo $model['merchant_id']?>" aria-expanded="false" aria-controls="collapseExample">
+                                <?php echo Yii::t('basicfield', 'Services & Treatments')?>
+                         </button></p>
+                <?php
+                }
+                ?>
                     <div class="collapse" id="collapseExample<?php echo $model['merchant_id']?>">
                         <table class="table table-striped cart-list">
                             <thead>
@@ -301,7 +312,7 @@ if(isset($session['latlang'])){
 
                                         $queryCatMerchant = Yii::$app->db->createCommand($sqlCategoryMerchant)->queryAll();
                                         foreach($queryCatMerchant as $service){
-                                            
+
                                     ?>
                                 <tr>
                                     <td>
@@ -311,21 +322,21 @@ if(isset($session['latlang'])){
                                         </p>
                                     </td>
                                     <td>
-                                        <strong>ab 
-					    <?php 
-					    
-					    
+                                        <strong>ab
+					    <?php
+
+
 					    $price = \common\components\Helper::getCurrencyCode($merchant);
 					    echo $price;
 					    ?>
-						
+
 						<?php echo (isset($service['price']))?$service['price'] : 0;?></strong>
                                     </td>
                                     <td class="options">
                                         <a href="<?php echo Yii::$app->urlManager->createUrl(['merchant/view', 'id'=>$merchantUrl])?>"><i class="icon_plus_alt2"></i></a>
                                     </td>
                                 </tr>
-                                
+
                                 <?php }
                                     }
                                     }else{?>
@@ -345,13 +356,32 @@ if(isset($session['latlang'])){
         <div class="col-md-3 col-sm-3">
             <div class="go_to">
                 <div>
-                    <a href="<?php echo $url?>" class="btn_1">
+                    <a href="<?php
+                    if ( isset($model['website_url']) && $model['website_url'] ) {
+                        echo $model['website_url'];
+                    } else {
+                        echo $view;
+                    }
+                    ?>" class="btn_1">
                         <?php echo Yii::t('basicfield', 'More Info & Appointment booking')?>
                         
                     </a>
                 </div>
             </div>
+            <?php
+             if ($hasVoucher) {
+            ?>
+            <div class="" style="margin-top: -10px">
+                <div>
+                    <a href="<?php echo $merchants_vouchers ?>" class="btn_1">
+                        <?php echo Yii::t('basicfield', 'offered Gift vouchers')?>
+                    </a>
+                </div>
+            </div>
         </div>
+        <?php
+                 }
+                 ?>
     </div><!-- End row-->
 </div><!-- End strip_list-->
 
