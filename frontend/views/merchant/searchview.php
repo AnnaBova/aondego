@@ -356,12 +356,7 @@ if(isset($session['latlang'])){
         <div class="col-md-3 col-sm-3">
             <div class="go_to">
                 <div>
-                    <a href="<?php
-                    if ( isset($model['website_url']) && $model['website_url'] ) {
-                        echo $model['website_url'];
-                    } else {
-                        echo $view;
-                    }
+                    <a href="<?php echo $view;
                     ?>" class="btn_1">
                         <?php echo Yii::t('basicfield', 'More Info & Appointment booking')?>
                         
