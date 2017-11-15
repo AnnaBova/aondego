@@ -156,21 +156,32 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
+	    if (!Yii::$app->user->isGuest) {
+//            return $this->goHome();
             
         }
 
         $model = new LoginForm();
-        
-        
-        if ($model->load(Yii::$app->request->post()) ) {
+        if (Yii::$app->request->post('socket') ) {
+	        if($model->load(['LoginForm' => Yii::$app->request->post('LoginForm')])) {
+
+		          if ($model->login()) {
+			        return json_encode([
+				        'status' => 200,
+				        'name'   =>  Yii::$app->user->identity->first_name,
+			        ]);
+		        }
+		        return [
+			        'status' => 403,
+		        ];
+	        }
+        }
+        if ( $model->load(Yii::$app->request->post()) ) {
             
             
             
             
             if(Yii::$app->request->isAjax){
-                
                 if($model->login()){
                     $result = ['success'=>true, 'redirect'=>Yii::$app->urlManager->createUrl('client/dashboard')];
                     Yii::$app->response->format = trim(Response::FORMAT_JSON);

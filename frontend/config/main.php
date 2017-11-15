@@ -69,7 +69,7 @@ return [
                 'forget-password' => 'site/request-password-reset',
                 'reset-password' => 'site/reset-password',
                 'search' => 'merchant/search',
-                
+
                 //'<controller>/<action>' => '<controller>/<action>',
 				'merchant/gift-voucher' => 'merchant/gift-voucher',
 				'merchant/paypal-ipn' => 'merchant/paypal-ipn',

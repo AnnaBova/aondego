@@ -66,18 +66,23 @@
                     </a>
 
                     </li>
-
-                        <?php if(Yii::$app->user->id){?>
-                        <li>
+                     <?php
+                     if (Yii::$app->user->isGuest) {
+                         $auth = 0;
+                     } else {
+                         $auth = 1;
+                     }
+                     ?>
+                        <li class="logged" >
                             <a href="<?php echo Yii::$app->urlManager->createUrl('client/dashboard')?>" >
-                                <button class="btn_4">
+                                <button class="btn_4 user_name">
 
                                 <?php echo Yii::$app->user->identity->first_name;?>
 
                                 </button>
                             </a>
                         </li>
-                        <li>
+                        <li class="logged"">
                         <a href="<?php echo Yii::$app->urlManager->createUrl('site/logout')?>" data-method="post">
                             <button class="btn_5">
                                 <?php echo Yii::t('basicfield', 'Logout')?>
@@ -86,13 +91,11 @@
                         </a>
                         </li>
 
-                        <?php }else{?>
-                        <li>
+                        <li class="not_logged">
                                 <a href="#0" data-toggle="modal" data-target="#login_2">
                                     <?php echo Yii::t('basicfield', 'Login')?>
                                 </a>
                          </li>
-                        <?php }?>
                    <li>
                     <div class="styled-select">
                         <select class="form-control" name="lang" id="lang">
@@ -135,6 +138,19 @@
     <?php
 
     $this->registerJs('
+    
+     var user_is_login = '.$auth.'
+    if ( user_is_login === 0 ) {
+       $(\'.not_logged\').css({display: \'inline-block\'});            
+       $(\'.logged\').css({display: \'none\'});            
+    } else {
+        console.log(\'here\');
+        $(\'.not_logged\').css({display: \'none\'});
+        $(\'.logged\').css({display: \'inline-block\'});
+    }
+
+    
+    
     $("#lang").on("change", function(ev){
     console.log("i am here");
         var code = $(this).val();

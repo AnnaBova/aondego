@@ -327,8 +327,6 @@ AppAsset::register($this);
                         console.log('Connected!');
                         var order = {user: 'order', text: 'name'};
                         console.log(order);
-
-
                     });
                     socket.on('order-".Yii::$app->user->id."', function (order) {
                         console.log('i am hjere');

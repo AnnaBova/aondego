@@ -68,8 +68,8 @@ echo "</script>";
 ?>
 
 <!-- SubHeader =============================================== -->
-<section class="parallax-window" data-parallax="scroll" 
-         data-image-src="<?php echo $model->behaviors['imageBehavior2']->getImageUrl(); ?>" 
+<section class="parallax-window" data-parallax="scroll"
+         data-image-src="<?php echo $model->behaviors['imageBehavior2']->getImageUrl(); ?>"
          data-natural-width="1600" data-natural-height="850"
 
          >
@@ -104,7 +104,7 @@ echo "</script>";
                 if ($j != 0 && $j <= 5) {
                     for ($k = 1; $k <= $j; $k++) {
                         ?>
-                        <i class="icon_star"></i> 
+                        <i class="icon_star"></i>
                         <?php
                     }
                 }
@@ -114,7 +114,7 @@ echo "</script>";
 
 
                         <span itemprop="reviewCount">
-                            <?php echo $queryCountRating; ?> 
+                            <?php echo $queryCountRating; ?>
                         </span>
                         <span itemprop="ratingValue" style="display :none"><?php echo $queryRating; ?></span>
 
@@ -122,7 +122,7 @@ echo "</script>";
 
 
                     </small>)
-                </div> 
+                </div>
             </div>
 
             <h1 itemprop="name"><?php echo $model->service_name; ?></h1>
@@ -131,21 +131,21 @@ echo "</script>";
             <em>
                 <?php
                 echo $mservice;
-                ?>                   
+                ?>
             </em>
             <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 
-                <i class="icon_pin"></i> 
+                <i class="icon_pin"></i>
 
                 <span itemprop="streetAddress"><?php echo $model->address ?></span>
 
-                - <i class="icon-phone-squared"></i> 
+                - <i class="icon-phone-squared"></i>
                 <a href="tel:+<?php echo $model->contact_phone ?>" target="_blank">
                     <span itemprop="telephone"><?php echo $model->contact_phone ?></span>
                 </a>
             </div>
-            <div><i class="icon-website-circled"></i> 
-                <a href="<?php echo 'http://' . $model->url; ?>" target="_blank" itemprop="url" > 
+            <div><i class="icon-website-circled"></i>
+                <a href="<?php echo 'http://' . $model->url; ?>" target="_blank" itemprop="url" >
                     <?php echo $model->url; ?></a></div>
         </div><!-- End sub_content -->
     </div><!-- End subheader -->
@@ -226,7 +226,7 @@ $keyword = $session['keyword'];
 
                             </a>
                         </li>
-			
+
 			<li role="presentation">
                             <a href="#our-team" aria-controls="our-team" role="tab" data-toggle="tab">
                                 <?php echo Yii::t('basicfield', 'Our Team') ?>
@@ -246,21 +246,21 @@ $keyword = $session['keyword'];
 
 
 				<div class="panel-group" id="accordion">
-				    <?php 
-				    
+				    <?php
+
 				    foreach ($model->staff as $staff){
-					    
-					    
+
+
 				    ?>
 				    <div class="review_strip_single1">
 					<h3 class="inner-1"><?= $staff->name; ?> </h3>
 				    <div class="row">
-					
+
 					<div class="col-md-3">
 					<?= \yii\helpers\Html::img($staff->behaviors['imageBehavior']->getImageUrl(),  ['class'=>"img-responsive img-circle" ,'height'=>"auto", 'width'=>"max-width:100%"]) ?>
 					</div>
                     <div class="col-md-9">
-					
+
 					<?php if(!empty($staff->description)){?>
 					<blockquote>
                                         <p>"<?= $staff->description; ?>"</p>
@@ -269,61 +269,61 @@ $keyword = $session['keyword'];
 <div class="col-md-6">
 
 					<?php if(!empty($staff->staff_has_category)){?>
-					
+
 					<h4>Services</h4>
-					
-					
+
+
 					<ul>
 						<?php foreach ($staff->staff_has_category as $services){
 							?>
 							<li><?php echo $services->category->title;?></li>
 						<?php }?>
 					</ul>
-						
+
 					<?php }
 					?>
 </div>
 
 <div class="col-md-6">
 <?php if(!empty($staff->addon_has_staff)){?>
-					
+
 					<h4>Extra</h4>
-					
-					
+
+
 					<ul>
 						<?php foreach ($staff->addon_has_staff as $extra){
 							?>
 							<li><?php echo $extra->addon->name;?></li>
 						<?php }?>
 					</ul>
-						
+
 					<?php }
 					?>
 
 
 </div>
-					</div> 
-				    </div> 
+					</div>
+				    </div>
 
 
-					
-					
+
+
 					<div class="row">
 
 </div>
 
 				    </div>
-				    
+
 				    <?php }?>
-				    
-				    
-				    
-				    
+
+
+
+
 				</div>
 			</div>
-			
-			
-			
+
+
+
                         <div role="tabpanel" class="tab-pane active" id="home">
 
 
@@ -365,7 +365,7 @@ $keyword = $session['keyword'];
                                               </div>
                                             </li>
                                           </ul>
-                                        
+
                                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/OfferCatalog">
                                           <span itemprop="name">One-time services</span>
                                           <ul itemprop="itemListElement" itemscope itemtype="http://schema.org/OfferCatalog">
@@ -425,9 +425,9 @@ $keyword = $session['keyword'];
                                                 </div>
                                                 <div id="collapseOne<?php echo $service['id'] ?>" class="panel-collapse collapse">
                                                     <div class="panel-body">
-                                                        
 
-													
+
+
 														<div class="service-list">
 														<div class="col-md-7 col-sm-7 col-xs-7">
 															<p class="service-list"><?php echo Yii::t('basicfield', 'Item') ?></p>
@@ -439,8 +439,8 @@ $keyword = $session['keyword'];
 														<p class="service-list"><?php echo Yii::t('basicfield', 'Book now') ?></p>
 													</div>
 													</div>
-												
-                                                            
+
+
 
                                                                 <?php
                                                                 $serviceSql = 'SELECT * FROM category_has_merchant WHERE category_id=' . $service['id'] . ' and is_active=1 and merchant_id=' . $model->id;
@@ -453,40 +453,40 @@ $keyword = $session['keyword'];
                                                                     foreach ($queryServices as $ser) {
                                                                         ?>
 					<div class="row" id="options_2">
-					
+
 						<div class="col-md-7 col-sm-7 col-xs-7">
 							<h5 class="option1"><strong><?php echo $ser['title'] ?></strong></h5>
                             <?php echo $ser['description']; ?>
 						</div>
 						<div class="col-md-3 col-sm-3 col-xs-3">
-							<h5 class="option1"><strong><?php 
-										
+							<h5 class="option1"><strong><?php
+
 										$price = \common\components\Helper::getCurrencyCode($model);
-										
-										
+
+
 										echo $price .'&nbsp'.$ser['price'] ?></strong></h5>
 						</div>
 						<div class="col-md-2 col-sm-2 col-xs-2">
 							<h5 class="option"><strong><a  class="add-to-cart" data-id='<?php echo $ser['id'] ?>'  data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample" href="#service-add-to-cart-<?php echo $ser['id'];?>"> <i class="icon_plus_alt2"></i></a></strong></h5>
 
 						</div>
-						
+
 					</div>
 
 
-						
+
 											<div id="service-add-to-cart-<?php echo $ser['id'];?>" class="collapse">
-										 <i class="icon-spinner loading" aria-hidden="true"></i>   
+										 <i class="icon-spinner loading" aria-hidden="true"></i>
 											</div>
-									   
-						
+
+
 
 
                                                                         <?php
                                                                     }
                                                                 }
                                                                 ?>
-                                                            
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -507,7 +507,7 @@ $keyword = $session['keyword'];
                                 ?>
 
                                 <ul class="bxslider">
-                                    <?php foreach ($gallery->galleryPhotos as $photo) { 
+                                    <?php foreach ($gallery->galleryPhotos as $photo) {
 //                                        echo '<pre>';
 //                                        print_R($photo->attributes);
                                         ?>
@@ -523,7 +523,7 @@ $keyword = $session['keyword'];
                             <?php } ?>
 
                         </div>
-                        <div role="tabpanel" class="tab-pane" id="messages">                    
+                        <div role="tabpanel" class="tab-pane" id="messages">
                             <h3><?php echo Yii::t('basicfield', 'Information') ?></h3>
                             <p>
                                 <?php echo Yii::t('basicfield', $model->description); ?>
@@ -624,25 +624,25 @@ $keyword = $session['keyword'];
 
 
 
-<!-- Register modal -->   
+<!-- Register modal -->
 <div class="modal fade" id="myReview" tabindex="-1" role="dialog" aria-labelledby="review" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content modal-popup">
             <a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
-            
-<?php echo $this->render('/mt-review/_form', ['model' => $review, 'merchant' => $model]); ?> 
-            <!--            <form method="post" action="assets/review_restaurant.php" name="review" id="review" class="popup-form">  
+
+<?php echo $this->render('/mt-review/_form', ['model' => $review, 'merchant' => $model]); ?>
+            <!--            <form method="post" action="assets/review_restaurant.php" name="review" id="review" class="popup-form">
                             <div class="login_icon"><i class="icon_comment_alt"></i></div>
-                            <input name="restaurant_name" id="restaurant_name" type="hidden" value="Mexican Taco Mex">	
+                            <input name="restaurant_name" id="restaurant_name" type="hidden" value="Mexican Taco Mex">
                             <div class="row" >
                                 <div class="col-md-6">
-                                    <input name="name_review" id="name_review" type="text" placeholder="Name" class="form-control form-white">			
+                                    <input name="name_review" id="name_review" type="text" placeholder="Name" class="form-control form-white">
                                 </div>
                                 <div class="col-md-6">
                                     <input name="email_review" id="email_review" type="email" placeholder="Your email" class="form-control form-white">
                                 </div>
-                            </div> End Row  
-            
+                            </div> End Row
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <select class="form-control form-white" name="food_review" id="food_review">
@@ -665,8 +665,8 @@ $keyword = $session['keyword'];
                                         <option value="Not rated">I don't know</option>
                                     </select>
                                 </div>
-                            </div>End Row     
-            
+                            </div>End Row
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <select class="form-control form-white"  name="punctuality_review" id="punctuality_review">
@@ -689,7 +689,7 @@ $keyword = $session['keyword'];
                                         <option value="Not rated">I don't know</option>
                                     </select>
                                 </div>
-                            </div>End Row      
+                            </div>End Row
                             <textarea name="review_text" id="review_text" class="form-control form-white" style="height:100px" placeholder="Write your review"></textarea>
                             <input type="text" id="verify_review" class="form-control form-white" placeholder="Are you human? 3 + 1 =">
                             <input type="submit" value="Submit" class="btn btn-submit" id="submit-review">
@@ -697,7 +697,7 @@ $keyword = $session['keyword'];
             <div id="message-review"></div>
         </div>
     </div>
-</div><!-- End Register modal -->  
+</div><!-- End Register modal -->
 <!-- Extras Modal -->
 <div class="modal fade" id="extras" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -707,7 +707,7 @@ $keyword = $session['keyword'];
     </div>
 </div>
 
-<!-- End modal -->   
+<!-- End modal -->
 <!--<style>
     .bx-viewport{min-height:200px;}
 </style>-->

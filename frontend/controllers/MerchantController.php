@@ -396,9 +396,9 @@ class MerchantController extends Controller
    
 
     public function actionSearch(){
-        
+
         $seo = \common\models\Seo::findOne(['type' => 2]);
-        
+
         \Yii::$app->view->registerMetaTag([
             'name' => 'description',
             'content' => Yii::t('seo', $seo->meta_description)

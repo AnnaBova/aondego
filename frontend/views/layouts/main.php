@@ -66,35 +66,35 @@ AppAsset::register($this);
 
         <div class="layer"></div><!-- Mobile menu overlay mask -->
 
-        <!-- Login modal -->   
+        <!-- Login modal -->
         <div class="modal fade" id="login_2" tabindex="-1" role="dialog" aria-labelledby="myLogin" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content modal-popup">
                     <a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
-                    
-                    <?php 
+
+                    <?php
                     $model = new LoginForm;
                     $form = ActiveForm::begin(['id' => 'login-form',
-                        
+
                         'options'=>[
                         'class'=>'popup-form'
                             ],
-                            
+
                         ]); ?>
-                    
+
                     <div class="login_icon"><i class="icon_lock_alt"></i></div>
 
-                        <?= $form->field($model, 'email', ['template'=>'{input}{error}', 
+                        <?= $form->field($model, 'email', ['template'=>'{input}{error}',
                             'options' => [
                             'tag'=>false
                         ]])->textInput(['autofocus' => true,'class'=>'form-control form-white','placeholder'=>Yii::t('basicfield','Email')])->label(false) ?>
 
-                        <?= $form->field($model, 'password', ['template'=>'{input}{error}', 
+                        <?= $form->field($model, 'password', ['template'=>'{input}{error}',
                             'options' => [
                             'tag'=>false
                         ]])->passwordInput(['class'=>'form-control form-white','placeholder'=>Yii::t('basicfield','Password')])->label(false)  ?>
 
-                        
+
 
                         <div class="text-left">
                             <?= Html::a(Yii::t('basicfield','Forgot Password?'), ['site/request-password-reset']) ?>.
@@ -109,12 +109,12 @@ AppAsset::register($this);
                         </div>
 
                     <?php ActiveForm::end(); ?>
-                    
-                    
+
+
 
                 </div>
             </div>
-        </div><!-- End modal -->   
+        </div><!-- End modal -->
 
         <!-- Register modal -->   
         <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myRegister" aria-hidden="true">
@@ -321,15 +321,14 @@ AppAsset::register($this);
 
         <?php $this->endBody() ;
         $this->registerJs("
-            var socket = io.connect('127.0.0.1:8000', {rejectUnauthorized: false});
+            var socket = io.connect('127.0.0.1:8080', {rejectUnauthorized: false});
               console.log(socket);
                     socket.on('connect', function () {
                         console.log('Connected!');
                         var order = {user: 'order', text: 'name'};
                         console.log(order);
-
-
                     });
+                   
                     socket.on('order-".Yii::$app->user->id."', function (order) {
                         console.log('i am hjere');
                         console.log(order);

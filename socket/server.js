@@ -13,6 +13,9 @@ io.on('connection', function(socket){
     socket.on('disconnect', function(){
         console.log('user disconnected');
     });
+    socket.on('login', function(login){
+        io.emit('login_search_page',{login: login});
+    });
     socket.on('order', function(order){
         console.log('i am here');
         if(order.merchant_id)
