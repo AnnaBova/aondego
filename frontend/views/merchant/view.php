@@ -735,7 +735,14 @@ $keyword = $session['keyword'];
             //if($( "#Img_carousel" ))
             //$( "#Img_carousel" ).sliderPro();
             
+            $("#home").on("click", ".select-free-time", function(event){
+            setTimeout(function(){ $(".addtocart").trigger("click");}, 300);
+                console.log($("#add-to-cart"));
+                console.log("time clicked");
+            });
+            
             $("body").on("click", ".add-to-cart", function(){
+                            console.log(" with time clicked");
                 $("div[id^=\"service-add-to-cart-\"]").empty();
 				
                 var serviceid = $(this).data("id");

@@ -169,7 +169,7 @@ echo Html::hiddenInput('find-min-val',$totalTime, ['id'=> 'find-min-val']);?>
 
 	<a type="button" class="btn_3" data-toggle="collapse" id="close" href="#service-add-to-cart-<?php echo $model->id; ?>" aria-expanded="false" aria-controls="collapseExample"> Close</a>
 <!--    <button type="button" class="btn_3" data-dismiss="modal"><?php echo Yii::t('basicfield', 'Close') ?></button>-->
-    <button type="button" class="btn_2 addtocart"><?php echo Yii::t('basicfield', 'Add to Cart') ?></button>
+    <button type="button" class="btn_2 addtocart" style="display:none"><?php echo Yii::t('basicfield', 'Add to Cart') ?></button>
 </div>
 <hr>
 
