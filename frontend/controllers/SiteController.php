@@ -171,16 +171,16 @@ class SiteController extends Controller
 				        'name'   =>  Yii::$app->user->identity->first_name,
 			        ]);
 		        }
-		        return [
+		        return json_encode([
 			        'status' => 403,
-		        ];
+		        ]);
 	        }
         }
         if ( $model->load(Yii::$app->request->post()) ) {
-            
-            
-            
-            
+
+
+
+
             if(Yii::$app->request->isAjax){
                 if($model->login()){
                     $result = ['success'=>true, 'redirect'=>Yii::$app->urlManager->createUrl('client/dashboard')];

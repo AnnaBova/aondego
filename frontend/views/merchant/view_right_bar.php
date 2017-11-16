@@ -399,6 +399,11 @@ echo $this->render('orders', ['orders' => $session['cart']]);
             <div class="text-left">
                 <?= Html::a(Yii::t('basicfield','Forgot Password?'), ['site/request-password-reset']) ?>.
             </div>
+	        <div class="text-left" >
+		        <a href="#0" data-toggle="modal" data-target="#register">
+			        <?php echo Yii::t('basicfield', 'Register')?>
+		        </a>
+	        </div>
 
             <div class="form-group">
                 <?= Html::button(Yii::t('basicfield','Submit'), ['class' => 'btn btn-submit',
@@ -462,6 +467,9 @@ $this->registerJs("
                     $('#login-ajax').modal(\"hide\");
                     $('#myReview').modal(\"show\");
                     $('.user_name').text(data.name);
+        }
+        if (data.status === 403) {
+                    $('#login-ajax').find('.help-block').last().html('Incorrect email or password.');
         }
         },
         error: function(err){
