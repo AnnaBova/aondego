@@ -204,7 +204,6 @@ class ClientController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->client_id]);
         } else {
@@ -244,10 +243,35 @@ class ClientController extends Controller
     }
     
     public function actionDashboard(){
-        $model = $this->findModel(Yii::$app->user->id);
-	
-	$addressBook = MtAddressBook::findOne(['client_id' => $model->id, 'as_default' => 1]);
-	
+	    $user_id = Yii::$app->user->id;
+        $model = $this->findModel($user_id);
+	    $user_notifications = [];
+		 if (Yii::$app->request->post('types_notifications')) {
+			 $sql = "delete from mt_client_notifications_action where mt_client_id = $user_id";
+			 Yii::$app->db->createCommand($sql)->execute();
+			 $new_notifications_types = Yii::$app->request->post('types_notifications');
+			 $user_notifications = $new_notifications_types;
+			 $values = '';
+			 if ($new_notifications_types) {
+				 $values = array_reduce($new_notifications_types, function($carry,$item) use ($user_id, &$values) {
+					 return $carry .= "($user_id, $item), ";
+				 });
+				 $values = rtrim($values, ' ,');
+				 $sql = "insert into mt_client_notifications_action (mt_client_id, notifications_action_id) VALUES $values";
+				 Yii::$app->db->createCommand($sql)->execute();
+			 }
+		 } else {
+			 $sql = "delete from mt_client_notifications_action where mt_client_id = $user_id";
+			 Yii::$app->db->createCommand($sql)->execute();
+		 }
+
+	    $addressBook = MtAddressBook::findOne(['client_id' => $model->id, 'as_default' => 1]);
+	    $sql = 'SELECT name from notifications_action';
+	    $typesNotifications = Yii::$app->db->createCommand($sql)->queryAll();
+	    if ($typesNotifications) {
+		    $typesNotifications = array_column($typesNotifications, 'name');
+	    }
+
 	if(count($addressBook) == 0){
 		$addressBook = new MtAddressBook;
 		$addressBook->client_id = $model->id;
@@ -271,7 +295,7 @@ class ClientController extends Controller
                 //->andWhere(['!=', 'status', '2'])
                 ,
         ]);
-        
+
         $dataProviderLoyality = new ActiveDataProvider([
             'query' => ClientLoyalityPoints::find()->where(['client_id' => Yii::$app->user->id]),
         ]);
@@ -325,6 +349,8 @@ class ClientController extends Controller
         return $this->render('dashboard', [
             'model' => $model, 
             'dataProviderOrder' => $dataProviderOrder,
+	        'typesNotifications' => $typesNotifications,
+	        'user_notifications' => $user_notifications,
             'dataProviderLoyality' => $dataProviderLoyality,
             'dataProviderAddress' => $dataProviderAddress,
 	    'dataProviderVoucher' => $dataProviderVoucher

@@ -437,24 +437,24 @@ Class EmailManager{
         
         $body = self::getBody($option, $variable);
         
-        
-        
-        
-        
         $subject = \frontend\models\Option::getValByName('email_tpl_sub_customer_appointment_cancelled', $language);;
         
         $subvariable = [];
         $subvariable['merchant_name'] = $order->merchant->service_name;
         
         $subject = self::getBody($subject, $subvariable);
-        
-        
-        
-        if($email_provider == 0){
-            self::sendPhpEmail($order->client->email_address, $subject, $body);
-        }else if($email_provider == 1){
-            self::sendSmtpEmail($order->client->email_address, $subject, $body);
-        }
+
+
+
+	    if (ClientNotificationFilter::check($order->client->client_id, 3)) {
+
+	        if($email_provider == 0){
+	            self::sendPhpEmail($order->client->email_address, $subject, $body);
+	        }else if($email_provider == 1){
+	            self::sendSmtpEmail($order->client->email_address, $subject, $body);
+	        }
+
+	    }
     }
     
     public static function cancelAppointmentMerchant($order){
@@ -602,12 +602,14 @@ Class EmailManager{
         $subvariable['merchant_name'] = $order->merchant->service_name;
         
         $subject = self::getBody($subject, $subvariable);
-        
-        if($email_provider == 0){
-            self::sendPhpEmail($order->client->email_address, $subject, $body);
-        }else if($email_provider == 1){
-            self::sendSmtpEmail($order->client->email_address, $subject, $body);
-        }
+
+	    if (ClientNotificationFilter::check($order->client->client_id, 1)) {
+		    if ($email_provider == 0) {
+			    self::sendPhpEmail($order->client->email_address, $subject, $body);
+		    } else if ($email_provider == 1) {
+			    self::sendSmtpEmail($order->client->email_address, $subject, $body);
+		    }
+	    }
 		$mid=$order->merchant->merchant_id;
 		$cid=$order->client_id;
 		$merchant = Merchant::find()->where(['merchant_id'=>$mid])->one();
@@ -615,8 +617,6 @@ Class EmailManager{
 		if($merchant->enable_sms==1 && ($client->notification==1 || $client->notification==2)){
 			MessagebirdManager::sendsmsAppointment($order);
 		}
-		
-		
     }
 
 
@@ -752,12 +752,6 @@ Class EmailManager{
         ->send();
         
         return true;
-        
-                
-
-        
-        
     }
-    
 }
 

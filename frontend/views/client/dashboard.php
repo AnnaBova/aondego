@@ -178,7 +178,23 @@ use yii\widgets\ActiveForm;
 										 <p class="text-small"><?php echo Yii::t('basicfield', 'Notification Type')?></p>
 										<?php echo $form->field($model,'notification')->radiolist(['0'=>'Email','1'=>'SMS','2'=>'Both'])->label(false)?>
 									</div>
-                                    
+                                    <div>
+                                        <p class="text-small">Notifications actions</p>
+
+                                        <?php
+                                            foreach ($typesNotifications as $key => $notification) {
+                                                $checked = false;
+                                                if ( in_array(($key+1),$user_notifications) )
+                                                {
+                                                    $checked = true;
+                                                }
+                                        ?>
+                                                <input <?php echo $checked?'checked':'' ?> type="checkbox" name="types_notifications[]" id="rd1" value="<?php echo $key+1?>"/>
+                                                <label for="rd1"><?php echo $notification?></label><br/>
+                                        <?php
+                                            }
+                                        ?>
+									</div>
                                     
                                 </div>
                                 

@@ -417,7 +417,6 @@ echo $this->render('orders', ['orders' => $session['cart']]);
 
 <?php
 
-var_dump($auth);
 $this->registerJs("
                 
     var user_is_login = $auth
