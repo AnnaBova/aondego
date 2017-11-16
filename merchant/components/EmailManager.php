@@ -1,6 +1,7 @@
 <?php
 namespace merchant\components;
 
+use frontend\components\ClientNotificationFilter;
 use Yii;
 /* 
  * To change this license header, choose License Headers in Project Properties.
@@ -190,12 +191,13 @@ Class EmailManager{
         $subject = self::getBody($subject, $subvariable);
         
         $adminEmail = self::adminSendEmail('email_tpl_sub_admin_appointment_cancelled', 'email_tpl_admin_appointment_cancelled', $variable, $email_provider);
-        
-        if($email_provider == 0){
-            self::sendPhpEmail($order->client_email, $subject, $body);
-        }else if($email_provider == 1){
-            self::sendSmtpEmail($order->client_email, $subject, $body);
-        }
+	    if( ClientNotificationFilter::check($order->client_id, 3) ) {
+		    if ($email_provider == 0) {
+			    self::sendPhpEmail($order->client_email, $subject, $body);
+		    } else if ($email_provider == 1) {
+			    self::sendSmtpEmail($order->client_email, $subject, $body);
+		    }
+	    }
     }
 
 
@@ -320,15 +322,15 @@ Class EmailManager{
         $subject = self::getBody($subject, $subvariable);
         
         $adminEmail = self::adminSendEmail('email_tpl_sub_admin_appointment_modified', 'email_tpl_admin_appointment_modified', $variable, $email_provider);
-        
-        
-        
-        if($email_provider == 0){
-            self::sendPhpEmail($order->client_email, $subject, $body);
-        }else if($email_provider == 1){
-            self::sendSmtpEmail($order->client_email, $subject, $body);
-        }
 
+
+	    if( ClientNotificationFilter::check($order->client_id, 2) ) {
+		    if ($email_provider == 0) {
+			    self::sendPhpEmail($order->client_email, $subject, $body);
+		    } else if ($email_provider == 1) {
+			    self::sendSmtpEmail($order->client_email, $subject, $body);
+		    }
+	    }
     }
 
 
@@ -390,13 +392,13 @@ Class EmailManager{
         $subject = self::getBody($subject, $subvariable);
         
         $adminEmail = self::adminSendEmail('email_tpl_sub_admin_new_appointment', 'email_tpl_admin_new_appointment', $variable, $email_provider);
-        
-        if($email_provider == 0){
-            self::sendPhpEmail($order->client_email, $subject, $body);
-        }else if($email_provider == 1){
-            self::sendSmtpEmail($order->client_email, $subject, $body);
-        }
-
+	    if( ClientNotificationFilter::check($order->client_id, 1) ) {
+		    if ($email_provider == 0) {
+			    self::sendPhpEmail($order->client_email, $subject, $body);
+		    } else if ($email_provider == 1) {
+			    self::sendSmtpEmail($order->client_email, $subject, $body);
+		    }
+	    }
     }
 
 

@@ -123,6 +123,7 @@ class GiftVoucherController extends \merchant\components\MerchantController
 				}
 
 			}
+
 				return $this->redirect(['index']);
 			}
 		}

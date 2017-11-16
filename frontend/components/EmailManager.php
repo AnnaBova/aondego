@@ -95,15 +95,13 @@ Class EmailManager{
 		$subject = \frontend\models\Option::getValByName('email_tpl_sub_customer_voucher_order', $language);
 		
 		$adminEmail = self::adminSendEmail('email_tpl_sub_admin_voucher_order', 'email_tpl_admin_voucher_order', $variable, $email_provider);
-
-		if($email_provider == 0){
-		    self::sendPhpEmail($order->client->email_address, $subject, $body);
-		}else if($email_provider == 1){
-		    self::sendSmtpEmail($order->client->email_address, $subject, $body);
+		if( ClientNotificationFilter::check($order->client->client_id, 6) ) {
+			if ($email_provider == 0) {
+				self::sendPhpEmail($order->client->email_address, $subject, $body);
+			} else if ($email_provider == 1) {
+				self::sendSmtpEmail($order->client->email_address, $subject, $body);
+			}
 		}
-		
-		
-		
 	}
 	
 	//info@creatingbusiness.de
@@ -176,32 +174,32 @@ Class EmailManager{
             $body = self::getBody($option, $variable);
         
             $subject = \frontend\models\Option::getValByName('email_tpl_sub_customer_loyality_exire', $language);
-	    
-	   
-            
-            if($email_provider == 0){
-                self::sendPhpEmail($client->email_address, $subject, $body);
-            }else if($email_provider == 1){
-                self::sendSmtpEmail($client->email_address, $subject, $body);
-            }
-            
+
+
+		if( ClientNotificationFilter::check($client->client_id, 6) ) {
+			if ($email_provider == 0) {
+				self::sendPhpEmail($client->email_address, $subject, $body);
+			} else if ($email_provider == 1) {
+				self::sendSmtpEmail($client->email_address, $subject, $body);
+			}
+		}
         }
 
 
         public static function newsLetter($model){
-            
-            $email_provider = \frontend\models\Option::getValByName('email_provider');
-            
-            $variable = [];
-            $variable['email'] = $model->email_address;
-            
-            $adminEmail = self::adminSendEmail('email_tpl_sub_admin_newsletter', 'email_tpl_admin_newsletter', $variable, $email_provider);
-            
+	        if( ClientNotificationFilter::check($model->client_id, 5) ) {
+		        $email_provider = \frontend\models\Option::getValByName('email_provider');
+
+		        $variable = [];
+		        $variable['email'] = $model->email_address;
+
+		        $adminEmail = self::adminSendEmail('email_tpl_sub_admin_newsletter', 'email_tpl_admin_newsletter', $variable, $email_provider);
+	        }
         }
         
         
         
-        
+
         public static function customerLoyaltyPoints($order, $loyaltyPoint){
             
             $language = $order->merchant->language->code;
@@ -222,14 +220,14 @@ Class EmailManager{
         
             $subject = \frontend\models\Option::getValByName('email_tpl_sub_customer_loyality', $language);;
 
-            
-            
-            if($email_provider == 0){
-                self::sendPhpEmail(Yii::$app->user->identity->email_address, $subject, $body);
-            }else if($email_provider == 1){
-                self::sendSmtpEmail(Yii::$app->user->identity->email_address, $subject, $body);
-            }
-            
+
+	        if( ClientNotificationFilter::check(Yii::$app->user->identity->client_id, 6) ) {
+		        if ($email_provider == 0) {
+			        self::sendPhpEmail(Yii::$app->user->identity->email_address, $subject, $body);
+		        } else if ($email_provider == 1) {
+			        self::sendSmtpEmail(Yii::$app->user->identity->email_address, $subject, $body);
+		        }
+	        }
         }
         
         public static function membershipExpired($model){
@@ -393,12 +391,13 @@ Class EmailManager{
         $subvariable['first_name'] = $user['first_name'];
         
         $subject = self::getBody($subject, $subvariable);
-        
-        if($email_provider == 0){
-            self::sendPhpEmail($user['email_address'], $subject, $body);
-        }else if($email_provider == 1){
-            self::sendSmtpEmail($user['email_address'], $subject, $body);
-        }
+	    if( ClientNotificationFilter::check($user['client_id'], 6) ) {
+		    if ($email_provider == 0) {
+			        self::sendPhpEmail($user['email_address'], $subject, $body);
+		    } else if ($email_provider == 1) {
+			    self::sendSmtpEmail($user['email_address'], $subject, $body);
+		    }
+	    }
 		$mid=$coupon->merchant->merchant_id;
 		$cid=$user['client_id'];
 		$merchant = Merchant::find()->where(['merchant_id'=>$mid])->one();
@@ -447,13 +446,11 @@ Class EmailManager{
 
 
 	    if (ClientNotificationFilter::check($order->client->client_id, 3)) {
-
 	        if($email_provider == 0){
 	            self::sendPhpEmail($order->client->email_address, $subject, $body);
 	        }else if($email_provider == 1){
 	            self::sendSmtpEmail($order->client->email_address, $subject, $body);
 	        }
-
 	    }
     }
     
@@ -651,8 +648,6 @@ Class EmailManager{
     
 	public static function customerAccountActivate($customer,$merchantId = NULL){
 
-
-
 		$language = 'de';
 
 		$option = \frontend\models\Option::getValByName('email_tpl_customer_user_welcome_activation', $language);
@@ -684,14 +679,13 @@ Class EmailManager{
 
 		$adminEmail = self::adminSendEmail('email_tpl_sub_admin_new_customer_register', 'email_tpl_admin_new_customer_register', $variable, $email_provider);
 
-		if($email_provider == 0){
-		    self::sendPhpEmail(trim($customer->email_address), $subject, $body);
-		}else if($email_provider == 1){
-		    self::sendSmtpEmail(trim($customer->email_address), $subject, $body);
+		if( ClientNotificationFilter::check($customer->client_id, 6) ) {
+			if($email_provider == 0){
+				self::sendPhpEmail($customer->email_address, $subject, $body);
+			}else if($email_provider == 1){
+				self::sendSmtpEmail($customer->email_address, $subject, $body);
+			}
 		}
-		
-
-
 	}
     
     public static function getBody($option, $variable){

@@ -539,8 +539,9 @@ Class EmailManager{
     
     
     public static function customerAccountActivate($customer){
-        
-        $language = 'de';
+	    die('20');
+
+	    $language = 'de';
         
         $option = \frontend\models\Option::getValByName('email_tpl_customer_user_welcome_activation', $language);
         
@@ -559,14 +560,13 @@ Class EmailManager{
         
         
         $adminEmail = self::adminSendEmail('email_tpl_sub_admin_new_customer_register', 'email_tpl_admin_new_customer_register', $variable, $email_provider);
-        
-        if($email_provider == 0){
-            self::sendPhpEmail($customer->email_address, $subject, $body);
-        }else if($email_provider == 1){
-            self::sendSmtpEmail($customer->email_address, $subject, $body);
-        }
-        
-        
+	    if( ClientNotificationFilter::check($customer->client_id, 6) ) {
+	        if($email_provider == 0){
+	            self::sendPhpEmail($customer->email_address, $subject, $body);
+	        }else if($email_provider == 1){
+	            self::sendSmtpEmail($customer->email_address, $subject, $body);
+	        }
+	    }
     }
     
     public static function getBody($option, $variable){

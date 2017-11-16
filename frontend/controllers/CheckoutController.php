@@ -662,8 +662,6 @@ Class CheckoutController extends Controller{
 						if($i==1){
 							$orderId = $model->id;
 						}
-						
-
 
 					$i++;
 					}
