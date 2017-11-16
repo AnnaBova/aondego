@@ -246,12 +246,12 @@ $js = <<<SCRIPT
 		$('.loading').show();
 		var obj = $(this);
 		obj.prop("disabled",true);
-	
+		var url = $('#gift-voucher-form').attr('action');
 		$('body .help-block').empty();
 	
 		$.ajax({
 			type : 'post',
-			url : '$url',
+			url : '$paymentUrl',
 			data : $('#gift-voucher-form').serialize(),
 			dataType : 'json',
 			success  : function(response){
@@ -281,6 +281,9 @@ $js = <<<SCRIPT
 					});
 				}
 				
+			},
+			error: function (err) {
+			console.log(err);
 			}
 		})
 		

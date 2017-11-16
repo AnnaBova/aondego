@@ -19,6 +19,9 @@ class ShippingAddress extends Model
     public $country_code;
     public $first_name;
     public $last_name;
+    public $date_created;
+    public $date_modified;
+    public $ip_address;
     public $as_default,$notevoucher;
     
 

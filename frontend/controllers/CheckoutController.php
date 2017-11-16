@@ -488,7 +488,7 @@ Class CheckoutController extends Controller{
 	
 	
 	public function actionVoucherPayment(){
-		
+
 		$addressBilling = new \frontend\models\BillingAddress();
 		
 		
@@ -500,7 +500,7 @@ Class CheckoutController extends Controller{
 		
 			
 		if(Yii::$app->request->isAjax){
-			
+
 			$addToCart->load(Yii::$app->request->post());
 			
 			
@@ -508,25 +508,46 @@ Class CheckoutController extends Controller{
 				
 				$session = Yii::$app->session;
 				
-				
+
 				
 				if(!empty($session['Vouchercart'])){
-					
-					
-					
-					
-					
-					
+
 					if($addToCart->deliveryOption == 2){
 
 						$addressShipping->load(Yii::$app->request->post());
+
 						if($addressShipping->validate()){
-							$address = new \frontend\models\MtAddressBook;
-							$address->attributes = $addressShipping->attributes;
-							$address->client_id = Yii::$app->user->id;
-							$address->as_default = 2;	
-							$address->save();
-							$addressId = $address->id;
+
+							$street     = $addressShipping->street;
+							$city       = $addressShipping->city;
+							$zipcode    = $addressShipping->zipcode;
+							$first_name = $addressShipping->first_name;
+							$last_name  = $addressShipping->last_name;
+
+							$sameAddressClient = '';
+							if ( $street && $city && $zipcode && $first_name && $last_name) {
+								$sameAddressClient = \frontend\models\MtAddressBook::findOne([
+									'client_id' => Yii::$app->user->id,
+									'street'    => $street,
+									'city'      => $city,
+									'zipcode'   => $zipcode,
+									'first_name'=> $first_name,
+									'last_name' => $last_name,
+								]);
+							}
+
+							if (!$sameAddressClient) {
+								$address = new \frontend\models\MtAddressBook;
+								$address->attributes = $addressShipping->attributes;
+								$address->client_id = Yii::$app->user->id;
+								$address->ip_address = Yii::$app->request->userIP;
+								$address->as_default = 2;
+								$address->save();
+								$addressId = $address->id;
+							} else {
+								$addressId = $sameAddressClient->id;
+							}
+
 
 						}else{
 							echo Json::encode(['success' => false, 'message' => $addressShipping->errors]);
@@ -603,7 +624,14 @@ Class CheckoutController extends Controller{
 						$model->voucher_note = $address->notevoucher;
 						
 						$currency = \common\models\Currency::findOne(['currency_symbol' => $value['currency']]);
-			
+						if($value['is_group'] == 0){
+							//print_r($v['is_group']);
+							$model->order_time = date('Y-m-d', strtotime($value['order_date'])) . ' ' . $value['free_time_list'];
+						}else if($value['is_group'] == 1){
+							$model->order_time = date('Y-m-d', strtotime($value['order_date'])) . ' ' . $value['time_req'];
+						}
+						$model->category_id = $key;
+
 						$model->currency = $currency->currency_code;
 						
 						
@@ -674,7 +702,7 @@ Class CheckoutController extends Controller{
 //					exit;
 					
 					if($addToCart->paymentMethod == 2){
-						
+
 						$post = http_build_query($query);
 						
 						$paypal = new \frontend\components\Paypal;

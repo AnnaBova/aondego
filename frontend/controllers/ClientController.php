@@ -302,7 +302,7 @@ class ClientController extends Controller
         
         
         $dataProviderAddress = new ActiveDataProvider([
-            'query' => MtAddressBook::find()->select('street')->distinct()->where(['client_id' => Yii::$app->user->id]),
+            'query' => MtAddressBook::find()->where(['client_id' => Yii::$app->user->id]),
         ]);
 	
 	$dataProviderVoucher = new ActiveDataProvider([
