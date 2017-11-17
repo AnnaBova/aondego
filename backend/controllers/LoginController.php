@@ -12,7 +12,7 @@ class LoginController extends Controller
 	public function actionIndex()
 	{
 
-            $this->layout='login_tpl';
+		$this->layout='login_tpl';
             
             if (!defined('CRYPT_BLOWFISH')||!CRYPT_BLOWFISH)
                 throw new CHttpException(500,"This application requires that PHP was compiled with Blowfish support for crypt().");
@@ -30,12 +30,12 @@ class LoginController extends Controller
             // collect user input data
             if(isset($_POST['LoginForm']))
             {
-                $model->attributes=$_POST['LoginForm'];
-
+	            $model->load(['LoginForm' => $_POST['LoginForm']]);
                 // validate user input and redirect to the previous page if valid
-                if(!$model->validate() && !$model->login())
+                if($model->validate() && $model->login())
                     $this->redirect(Yii::$app->user->returnUrl);
             }
+
 
 		// display the login form
             return $this->render('login',array('model'=>$model));

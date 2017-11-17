@@ -447,7 +447,6 @@ $this->registerJs("
     
     
     $('#login-ajax-button').click(function(event){
-    console.log('sdf');
     event.preventDefault();
     var email = $('#loginform-email').val();
     var pass = $('#loginform-password').val();

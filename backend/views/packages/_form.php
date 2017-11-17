@@ -12,7 +12,6 @@ use demogorgorn\ajax\AjaxSubmitButton;
 ?>
 
 <div class="box box-primary">
-
     <?php $form = ActiveForm::begin([
         'id' => 'packages-form',
         'enableAjaxValidation' => false,
@@ -53,7 +52,7 @@ use demogorgorn\ajax\AjaxSubmitButton;
 
     
 
-    
+
 
     <?= $form->field($model, 'workers_limit')->textInput() ?>
     

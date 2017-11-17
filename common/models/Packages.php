@@ -174,8 +174,8 @@ class Packages extends ActiveRecord
     
     public function afterFind()
     {
-        $this->date_modified = date('d-m-Y H:i:s', strtotime($this->date_modified));
-        $this->date_created = date('d-m-Y H:i:s', strtotime($this->date_created));
+//        $this->date_modified = date('d-m-Y H:i:s', strtotime($this->date_modified));
+//        $this->date_created = date('d-m-Y H:i:s', strtotime($this->date_created));
 
         parent::afterFind();
     }
