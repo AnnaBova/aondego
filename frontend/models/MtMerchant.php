@@ -127,7 +127,7 @@ class MtMerchant extends ActiveRecord implements IdentityInterface
             [['free_delivery', 'status', 'package_id', 'payment_steps', 'is_featured', 'is_ready', 'is_sponsored', 'user_lang', 'sort_featured', 'is_commission', 'commission_type', 'manager_extended', 'gallery_id', 'is_purchase'], 'integer'],
             [['date_created', 'date_modified', 'date_activated', 'last_login', 'membership_expired', 'sponsored_expiration', 'membership_purchase_date'], 'safe'],
             [['package_price', 'percent_commission', 'fixed_commission'], 'number'],
-            [['service_name', 'contact_name', 'contact_email', 'city', 'state', 'service', 'session_token', 'seo_title', 'seo_description', 'seo_keywords', 'url', 'fb', 'tw', 'gl', 'yt', 'it', 'paypall_id', 'paypall_pass', 'vk', 'pr'], 'string', 'max' => 255],
+            [['service_name', 'contact_name', 'contact_email', 'city', 'state', 'service', 'session_token', 'seo_title', 'seo_description', 'seo_keywords', 'url', 'fb', 'tw', 'gl', 'yt', 'it', 'paypall_id', 'paypall_pass', 'vk', 'pr', 'slug'], 'string', 'max' => 255],
             [['service_phone', 'contact_phone', 'post_code', 'delivery_estimation', 'username', 'password', 'activation_token', 'manager_username', 'manager_password'], 'string', 'max' => 100],
             [['country_code'], 'string', 'max' => 3],
             [['activation_key', 'ip_address', 'lost_password_code'], 'string', 'max' => 50],
@@ -149,7 +149,7 @@ class MtMerchant extends ActiveRecord implements IdentityInterface
 			[
                 'class' => SluggableBehavior::className(),
                 'attribute' => 'service_name',
-                //'slugAttribute' => 'slug',
+                'slugAttribute' => 'slug',
             ],
             'imageBehavior' => [
                 'class' => \frontend\components\ImageBehavior::className(),
@@ -248,6 +248,7 @@ class MtMerchant extends ActiveRecord implements IdentityInterface
             'pr' => 'Pr',
             'is_purchase' => 'Is Purchase',
             'description' => 'Description',
+            'slug' => 'slug',
         ];
     }
     
