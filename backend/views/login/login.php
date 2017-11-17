@@ -30,7 +30,7 @@ use yii\widgets\ActiveForm;
 //    )); ?>
   <!-- <form id="forms" class="uk-form forms" onsubmit="return false;" method="POST">   -->
 
-        <?php echo $form->field($model,'username'); ?>
+        <?php echo $form->field($model,'email'); ?>
 
         <?php echo $form->field($model,'password')->passwordInput(); ?>
 
@@ -44,16 +44,16 @@ use yii\widgets\ActiveForm;
    <div class="form-group">
         <?= Html::submitButton( 'Login' , ['class' => 'btn btn-default']) ?>
     </div>
-   
+
    <p><a href="javascript:;" class="mt-fp-link"><?php echo Yii::t("default","Forgot Password")?>?</a></p>
    <?php ActiveForm::end(); ?>
     <?php  unset($form); ?>
-   
-   
-    <form id="mt-frm" class="uk-form mt-frm" onsubmit="return false;" method="POST">   
+
+
+    <form id="mt-frm" class="uk-form mt-frm" onsubmit="return false;" method="POST">
    <?php echo Html::hiddenInput("action",'adminForgotPass')?>
    <h4><?php echo Yii::t("default","Forgot Password")?></h4>
-   
+
    <div class="uk-form-row">
       <div class="uk-form-icon uk-width-1">
         <i class="uk-icon-envelope"></i>
@@ -61,16 +61,17 @@ use yii\widgets\ActiveForm;
        'data-validation'=>"required"
        ));?>
       </div>
-   </div>   
-      
-   <div class="uk-form-row">   
+   </div>
+
+   <div class="uk-form-row">
    <button class="uk-button uk-width-1"><?php echo Yii::t("default","Submit")?> <i class="uk-icon-chevron-circle-right"></i></button>
    </div>
-   
+
    <p><a href="javascript:;" class="mt-login-link"><?php echo Yii::t("default","Login")?></a></p>
-   
+
    </form>
-   
+
 </div>
 </div> <!--END login_wrap-->
 </div>
+<?php
