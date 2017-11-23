@@ -24,12 +24,12 @@
                     <li class="submenu">
                     <a href="<?php echo Yii::$app->urlManager->createUrl('merchant/sign-up');?>">
                         <?php echo Yii::t('basicfield', 'Merchant Registration')?>
-                        
+
                     </a>
 
                     </li>
-                    
-                    
+
+
 <!--                    <li><a href="list_page.html">Search</a></li>
                     <li class="submenu">
                     <a href="javascript:void(0);" class="show-submenu">Pages<i class="icon-down-open-mini"></i></a>
@@ -39,13 +39,13 @@
                     <li><a href="cart_2.html">Order step 2</a></li>
                     <li><a href="cart_3.html">Order step 3</a></li>
                     <li><a href="grid_list.html">Grid list</a></li>
-                    <li><a href="contacts.html">Contacts</a></li>                        
+                    <li><a href="contacts.html">Contacts</a></li>
                     <li><a href="about.html">About us</a></li>
                     <li><a href="faq.html">Faq</a></li>
 					<li><a href="pricing.html">Pricing</a></li>
                     </ul>
                     </li>-->
-                    
+
                         <?php if(Yii::$app->user->id){?>
                         <li>
                             <a href="<?php echo Yii::$app->urlManager->createUrl('client/dashboard')?>" >
@@ -60,11 +60,11 @@
                         <a href="<?php echo Yii::$app->urlManager->createUrl('site/logout')?>" data-method="post">
                             <button class="btn_5">
                                 <?php echo Yii::t('basicfield', 'Logout')?>
-                               
+
                             </button>
                         </a>
                         </li>
-                        
+
                         <?php }else{?>
                         <li>
                                 <a href="#0" data-toggle="modal" data-target="#login_2">
@@ -75,41 +75,41 @@
                    <li>
                     <div class="styled-select">
                         <select class="form-control" name="lang" id="lang">
-                            <?php 
-                            
+                            <?php
+
                                 $cookies = Yii::$app->request->cookies;
                                 $current_language = $cookies->getValue('language');
-                                
+
                                 echo $current_language;
                                 //exit;
 
                             $languages = \common\models\Language::find()->all();
                             foreach ($languages as $language){
                             ?>
-                            <option value="<?php echo $language->code;?>" 
+                            <option value="<?php echo $language->code;?>"
                                 <?php if(isset($current_language) && $current_language == $language->code){ echo 'selected="selected"';}?> ><?php echo $language->name;?></option>
                             <?php }?>
-                            
-                            
-							
+
+
+
                         </select>
                     </div>
                         </li>
-                    
+
                 </ul>
             </div><!-- End main-menu -->
-            
+
 
 
 
 
             </nav>
-		
+
         </div><!-- End row -->
     </div><!-- End container -->
-    
-    <?php 
-    
+
+    <?php
+
     $this->registerJs('
     $("#lang").on("change", function(ev){
     console.log("i am here");
@@ -130,4 +130,3 @@
         
         })');
     ?>
-   

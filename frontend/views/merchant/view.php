@@ -742,7 +742,6 @@ $keyword = $session['keyword'];
             });
             
             $("body").on("click", ".add-to-cart", function(){
-                            console.log(" with time clicked");
                 $("div[id^=\"service-add-to-cart-\"]").empty();
 				
                 var serviceid = $(this).data("id");

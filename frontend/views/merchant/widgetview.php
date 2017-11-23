@@ -10,7 +10,7 @@ $this->registerJsFile('https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/i18
 
 use frontend\models\MtMerchant;
 use yii\widgets\ActiveForm;
-?> 
+?>
 <div class="row">
 
     <div class="col-md-8">
@@ -64,9 +64,9 @@ use yii\widgets\ActiveForm;
                                                 </div>
                                                 <div id="collapseOne<?php echo $service['id'] ?>" class="panel-collapse collapse">
                                                     <div class="panel-body">
-                                                        
 
-													
+
+
 														<div class="service-list">
 														<div class="col-md-6 col-sm-6 col-xs-6"  id="options_3">
 															<p class="service-list"><?php echo Yii::t('basicfield', 'Item') ?></p>
@@ -78,8 +78,8 @@ use yii\widgets\ActiveForm;
 														<p class="service-list"><?php echo Yii::t('basicfield', 'Book now') ?></p>
 													</div>
 													</div>
-												
-                                                            
+
+
 
                                                                 <?php
                                                                 $serviceSql = 'SELECT * FROM category_has_merchant WHERE category_id=' . $service['id'] . ' and is_active=1 and merchant_id=' . $model->id;
@@ -98,11 +98,11 @@ use yii\widgets\ActiveForm;
                             <p><?php echo $ser['description']; ?></p>
 						</div>
 						<div class="col-md-3 col-sm-3 col-xs-3" id="options_3">
-							<h5><strong><?php 
-										
+							<h5><strong><?php
+
 										$price = \common\components\Helper::getCurrencyCode($model);
-										
-										
+
+
 										echo $price .'&nbsp'.$ser['price'] ?></strong></h5>
 						</div>
 						<div class="col-md-3 col-sm-3 col-xs-3" id="options_3">
@@ -115,9 +115,9 @@ use yii\widgets\ActiveForm;
 					<div class="row" id="options_2">
 						<div class="col-md-12" id="options_3">
 											<div id="service-add-to-cart-<?php echo $ser['id'];?>" class="collapse">
-										 <i class="icon-spinner loading" aria-hidden="true"></i>   
+										 <i class="icon-spinner loading" aria-hidden="true"></i>
 											</div>
-									   
+
 						</div>
 
 					</div><!-- Edn options 2 -->
@@ -125,7 +125,7 @@ use yii\widgets\ActiveForm;
                                                                     }
                                                                 }
                                                                 ?>
-                                                            
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -190,7 +190,7 @@ use yii\widgets\ActiveForm;
 
 
 						</div>
-					</div>					
+					</div>
 
 
 					<hr class="styled">
@@ -268,12 +268,12 @@ use yii\widgets\ActiveForm;
 
 
 						</div>
-					</div>					
+					</div>
 
 
 					<hr class="styled">
 				</div>
-			</div><!-- End summary_review -->						
+			</div><!-- End summary_review -->
 		<?php } ?>
 
 
@@ -313,9 +313,9 @@ use yii\widgets\ActiveForm;
 								<div class="col-md-12 col-sm-12">
 									<div class="form-group">
 										<label>Team</label>
-										
+
 <?php echo $form->field($appointment, 'employee')->dropDownList(yii\helpers\ArrayHelper::map(frontend\models\Staff::find()->where(['merchant_id' => $model->id])->all(), 'id', 'name')) ?>
-										
+
 									</div>
 								</div>
 								<div class='col-sm-12'>
@@ -359,7 +359,7 @@ echo $form->field($appointment, 'apply_coupon')->checkbox(['class' => 'icheck co
 					</label>
 				</div>
 			</div>
-			<hr>					
+			<hr>
 			<table class="table table_summary">
 				<tbody>
 					<tr>
@@ -372,7 +372,7 @@ echo $form->field($appointment, 'apply_coupon')->checkbox(['class' => 'icheck co
 					</tr>
 					<tr>
 						<td>
-							<?php echo Yii::t('basicfield', 'Coupon'); ?> <span id="couponper"><?php echo $session['couponPer']; ?></span> 
+							<?php echo Yii::t('basicfield', 'Coupon'); ?> <span id="couponper"><?php echo $session['couponPer']; ?></span>
 							<span class="pull-right" id="discount">
 								<?php echo $price ?>
 								<?php echo number_format($session['discount'], 2, '.', ''); ?></span>
@@ -423,6 +423,11 @@ echo $form->field($appointment, 'apply_coupon')->checkbox(['class' => 'icheck co
             //if($( "#Img_carousel" ))
             //$( "#Img_carousel" ).sliderPro();
             
+             $("#accordion").on("click", ".select-free-time", function(event){
+            setTimeout(function(){ $(".addtocart").trigger("click");}, 300);
+                console.log($("#add-to-cart"));
+                console.log("time clicked");
+            });
             $("body").on("click", ".add-to-cart", function(){
                 $("div[id^=\"service-add-to-cart-\"]").empty();
 				console.log("i here")

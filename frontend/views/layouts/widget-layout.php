@@ -22,11 +22,11 @@ AppAsset::register($this);
     </head>
     <body>
         <?php $this->beginBody();
-        
+
         $cookies = Yii::$app->request->cookies;
-        
+
         $languageCookie = $cookies['language'];
-        
+
         if(isset($languageCookie->value) && !empty($languageCookie->value)){
             Yii::$app->language = $languageCookie->value;
         }
@@ -48,21 +48,19 @@ AppAsset::register($this);
         </div><!-- End Preload -->
 
     <div class="container margin_60_35">
-   
+
     <?php echo $content;?>
     </div>
-        
+
 
         <?php $this->endBody() ;
-        
+
         $this->registerJs("
             var socket = io.connect('http://139.59.128.5:3000/');
                     socket.on('connect', function () {
                         console.log('Connected!');
                         var order = {user: 'order', text: 'name'};
                         console.log(order);
-
-
                     });
                     socket.on('order-".Yii::$app->user->id."', function (order) {
                         console.log('i am hjere');
@@ -103,7 +101,7 @@ AppAsset::register($this);
         ?>
     </body>
 </html>
-<?php $this->endPage() 
-        
-        
+<?php $this->endPage()
+
+
         ?>
