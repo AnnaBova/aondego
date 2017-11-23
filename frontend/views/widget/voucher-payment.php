@@ -111,7 +111,7 @@ if (isset($merchantid)) {
 		    </div>
 		    <div class="payment_select nomargin" id="mail">
 
-			<?php echo $this->render('shipping-address', ['model' => $address, 'form' => $form, 'addToCart' => $addToCart]) ?>
+			<?php echo $this->render('shipping-address', ['model' => $addressShipping, 'form' => $form, 'addToCart' => $addToCart]) ?>
 
 		    </div>
 		    

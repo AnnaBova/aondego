@@ -757,9 +757,6 @@ $keyword = $session['keyword'];
 					console.log("i mahere at update");
                     update = 1;
                 }
-				
-				
-
                 
                 $.ajax({
                     type : "post",
