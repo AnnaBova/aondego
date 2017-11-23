@@ -543,7 +543,9 @@ class OrderController extends Controller
     public function actionGetStaffFreeTime()
     {
         if (isset($_POST['staff_id']) && $_POST['staff_id']) {
-			
+            if (isset($_POST['mcat']) && $_POST['mcat']) {
+	            $mcat  = $_POST['mcat'];
+            }
 			$today = date ('Y-m-d');
 			$pdate = date ('Y-m-d', strtotime('+1 days', strtotime($today)));
 			
@@ -570,7 +572,7 @@ class OrderController extends Controller
 				$dd = Yii::t('basicfield', 'This day is free. Please select another day or staff member.');
 			}
 
-            $addOns = $this->renderAjax('_addons_single', ['addons' => $staff->addons]);
+            $addOns = $this->renderAjax('_addons_single', ['addons' => $staff->addons, 'mcat' => $mcat]);
             $res = [
                 'dd' => $dd,
                 'add_ons' => $addOns

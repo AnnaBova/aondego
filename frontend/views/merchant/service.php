@@ -65,7 +65,7 @@ echo Html::hiddenInput('find-min-val',$totalTime, ['id'=> 'find-min-val']);?>
 									?>
 
 								<li>
-									<a  class="staff" data-toggle="collapse" href="#collapseExample2-1" aria-expanded="false" aria-controls="collapseExample2" data-staffid="<?php echo $staff->id; ?>">
+									<a  class="staff" data-toggle="collapse" href="#collapseExample2-1" aria-expanded="false" aria-controls="collapseExample2" data-staffid="<?php echo $staff->id; ?>  data-merchCatId="<?php echo $model->id; ?>">
 										<?= $staff->name; ?>
 									</a>
 								</li>
@@ -89,12 +89,12 @@ echo Html::hiddenInput('find-min-val',$totalTime, ['id'=> 'find-min-val']);?>
 			<div class="row" id="options_2">
 				<span id="SingleOrder_addons_list">
 					
-					<?php 
+					<?php
+
 					if($update == 1 ){
                     
                     $staff = Staff::findOne(['id'=> $updateArray['staff_id']]);
-                    
-                    
+
                     echo $this->render('/order/_addons_single', ['addons' => $staff->addons,
                         'selectedaddons' => $updateArray['addons_list']]); 
 					
@@ -185,6 +185,7 @@ echo Html::hiddenInput('find-min-val',$totalTime, ['id'=> 'find-min-val']);?>
 <?php ActiveForm::end(); ?>
 
 <?php
+$mcat = array_column($model->getAddons()->all(),'id');
 $this->registerJs("
 	
 	$('.dropdown-menu li a').click(function(){
@@ -195,6 +196,7 @@ $this->registerJs("
 	});
 
 	var update = ".$update.";
+	var mcat = ".json_encode($mcat).";
 	var date = new Date();
 	date.setDate(date.getDate() - 1);
 	
@@ -262,6 +264,7 @@ $this->registerJs("
 			data : {staff_id:staffid,
 			min_val:$('#find-min-val').val(), 
 			cat:" . $model->id . ",
+			mcat: mcat,
 			}, 
 			dataType : 'json',
 			success : function(response){

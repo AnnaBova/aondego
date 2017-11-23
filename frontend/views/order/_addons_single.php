@@ -9,11 +9,17 @@
 ?>
 <div class="col-md-12">
 <?php
-
 $i=0;foreach($addons as  $val){
-    
-    $selected = (isset($selectedaddons) && in_array($val->id, $selectedaddons) ) ? "checked='checked'" : "";
-    echo '<label ><input placeholder="Checkboxes" '.$selected.' class="single-checkbox-class" id="SingleOrder_addons_list_'.$val->id.'" value="'.$val->id.'" type="checkbox" data-price = "'.$val->price.'" data-time = "'.$val->time_in_minutes.'" name="AddToCart[addons_list]['.$i.']">'.$val->nameWithPriceAndTime.'</label>';
+
+    if (!isset($mcat) ) {
+        $selected = (isset($selectedaddons) && in_array($val->id, $selectedaddons) ) ? "checked='checked'" : "";
+        echo '<label ><input placeholder="Checkboxes" '.$selected.' class="single-checkbox-class" id="SingleOrder_addons_list_'.$val->id.'" value="'.$val->id.'" type="checkbox" data-price = "'.$val->price.'" data-time = "'.$val->time_in_minutes.'" name="AddToCart[addons_list]['.$i.']">'.$val->nameWithPriceAndTime.'</label>';
+    } else {
+        if(in_array($val->id, $mcat)) {
+            $selected = (isset($selectedaddons) && in_array($val->id, $selectedaddons) ) ? "checked='checked'" : "";
+            echo '<label ><input placeholder="Checkboxes" '.$selected.' class="single-checkbox-class" id="SingleOrder_addons_list_'.$val->id.'" value="'.$val->id.'" type="checkbox" data-price = "'.$val->price.'" data-time = "'.$val->time_in_minutes.'" name="AddToCart[addons_list]['.$i.']">'.$val->nameWithPriceAndTime.'</label>';
+        }
+    }
     $i++;
 }?>
 </div>
