@@ -1,5 +1,6 @@
 <?php
 namespace merchant\controllers;
+use common\models\OrderStatus;
 use merchant\components\MerchantController;
 use Yii;
 use common\models\SingleOrder;
@@ -11,7 +12,25 @@ use \yii\helpers\Html;
 class OrderController extends MerchantController
 {
 
-	
+
+	public function behaviors()
+	{
+		return [
+			'access' => [
+				'class' => \yii\filters\AccessControl::className(),
+				'only' => ['create', 'update'],
+				'rules' => [
+					// allow authenticated users
+					[
+						'allow' => true,
+						'roles' => ['@'],
+					],
+					// everything else is denied
+				],
+			],
+		];
+	}
+
 	public function actionChangeDelivery($id){
 		$model = $this->loadModel($id);
 		
@@ -40,6 +59,28 @@ class OrderController extends MerchantController
 			}
 			
 		}
+	}
+
+	public function actionChangeStatus(int $model_id, int $status_id){
+
+		$model = $this->loadModel($model_id);
+
+		if(OrderStatus::findOne($status_id)){
+			$model->status = $status_id;
+			if( $model->save() ) {
+				$client = $model->getClient()->all();
+				if( $status_id === 2) {
+					\merchant\components\EmailManager::cancelAppointment($model);
+				}
+
+				if( $status_id === 1) {
+					\merchant\components\EmailManager::modifiedAppointment($model);
+				}
+			}
+		}
+
+		$this->redirect(['gift-voucher/sales']);
+
 	}
 
     public function actionAdd()

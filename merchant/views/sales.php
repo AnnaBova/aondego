@@ -16,7 +16,7 @@ $this->context->menu = false;
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    
+
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -31,12 +31,12 @@ $this->context->menu = false;
 
                 ],
             ],
-            
+
 //                'filterSelector' => "select[name='".$dataProvider->getPagination()->pageSizeParam."'],input[name='".$dataProvider->getPagination()->pageParam."']",
-            
+
                 'pager' => [
                     'class' => \liyunfang\pager\LinkPager::className(),
-                    
+
                     'prevPageLabel' => '<<',   // Set the label for the "previous" page button
                     'nextPageLabel' => '>>',   // Set the label for the "next" page button
                     'firstPageLabel'=>'First',   // Set the label for the "first" page button

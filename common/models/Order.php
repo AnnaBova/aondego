@@ -242,7 +242,7 @@ class Order extends ActiveRecord
     
     public function getClient()
     {
-        return $this->hasOne(Client::className(), ['id' => 'client_id']);
+        return $this->hasOne(Client::className(), ['client_id' => 'client_id']);
     }
     
     public function getMerchant()

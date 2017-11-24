@@ -118,13 +118,13 @@ class OrderSearch extends Order
         //echo $this->fromTo;
         if(!empty($this->fromTo)){
             $explode = explode(' - ', $this->fromTo);
-	    
+
 	    $from = date('Y-m-d', strtotime($explode[0]));
-	    
+
 	    $to = date('Y-m-d', strtotime($explode[1]));
-	    
-	    
-            
+
+
+
             $query->andFilterWhere(['between', 'DATE(create_time)',$from, $to]);
         }
         

@@ -2,6 +2,7 @@
 
 namespace merchant\controllers;
 
+use common\models\OrderStatus;
 use Yii;
 use common\models\GiftVoucher;
 use common\models\GiftVoucherSearch;
@@ -54,11 +55,12 @@ class GiftVoucherController extends \merchant\components\MerchantController
 		$searchModel->merchant_id = Yii::$app->user->id;
 		$searchModel->is_service_gift = 1;
 		$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+		$ordersStatus = OrderStatus::find()->all();
 
 		return $this->render('sales', array(
 		    'searchModel' => $searchModel,
-		    'dataProvider' => $dataProvider
+		    'dataProvider' => $dataProvider,
+		    'ordersStatus' => $ordersStatus
 		));
 
 	}

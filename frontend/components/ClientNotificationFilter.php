@@ -12,7 +12,7 @@ class ClientNotificationFilter
 		if ($idsNotifications) {
 			$idsNotifications = array_column($idsNotifications, 'notifications_action_id');
 		}
-		if (!in_array($notification_action_id, $idsNotifications)) {
+		if (in_array($notification_action_id, $idsNotifications)) {
 			return true;
 		}
 		return false;

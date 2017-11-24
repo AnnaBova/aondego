@@ -19,7 +19,7 @@ class OrderStatus extends ActiveRecord
 	 */
 	public static function tableName()
 	{
-		return '{{order_status}}';
+		return '{{mt_order_status}}';
 	}
 
 	/**

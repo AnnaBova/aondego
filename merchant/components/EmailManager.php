@@ -200,7 +200,6 @@ Class EmailManager{
 	    }
     }
 
-
     public static function newAppointmentMerchant($order){
         $language = $order->merchant->language->code;
         
