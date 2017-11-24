@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 <div class="box box-primary">
 
     <?php $form = ActiveForm::begin(); ?>
-    
+
     <div class="box-header with-border">
         <p class="help-block"><?=Yii::t('basicfield', 'Fields with {span} are required.',['span'=>'<span class="required">*</span>'])?></p>
 

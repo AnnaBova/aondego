@@ -214,8 +214,15 @@ class Merchant extends ActiveRecord implements IdentityInterface
          //   'category' => array(self::BELONGS_TO, 'ServiceCategory', 'subcategory_id'),
 		);
 	}
-        
-        
+
+	/**
+	 * @return ActiveQuery
+	 */
+	public function getLoyaltyPoints()
+	{
+		return $this->hasMany(LoyaltyPoints::className(), ['merchant_id' => 'merchant_id']);
+	}
+
         public static function getTotalAppointments($model){
             
             $sql = 'SELECT COUNT(*) as total from `order` where merchant_id='.$model->merchant_id;

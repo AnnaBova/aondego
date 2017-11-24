@@ -110,4 +110,14 @@ class Review extends ActiveRecord
 
         parent::afterFind();
     }
+
+
+	/**
+	 *  Get review with comments
+	 * @return \yii\db\ActiveQuery
+	 */
+	public function withComments ()
+	{
+		return $this->hasOne(Comment::className(), ['review_id' => 'review_id']);
+	}
 }

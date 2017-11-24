@@ -716,15 +716,12 @@ Class CheckoutController extends Controller{
 						    ]);
 						Yii::$app->end();
 					}else{
-						
-						
-						
 						$merchantLoylitypoints = \frontend\models\LoyaltyPoints::findOne(['merchant_id' => $model->merchant_id]);
 
 						if($merchant->giftVoucherSetting->receive_loyalty_points == 1 && $merchantLoylitypoints->is_active == 1){
 
 						    $loyalitypoint = \frontend\models\Option::getValByName('website_loyalty_points');
-
+							$loyalitypoint = $loyalitypoint?$loyalitypoint:1;
 						    if(!empty($loyalitypoint)){
 							$clintLoyalityPoint = \frontend\models\ClientLoyalityPoints::findOne(['client_id' => Yii::$app->user->id, 'merchant_id' => $model->merchant_id]);
 
@@ -736,17 +733,24 @@ Class CheckoutController extends Controller{
 							    $clintLoyalityPoint->created_at = new \yii\db\Expression('NOW()');
 							}
 
-							$total = $session['voucher-total'];
+//							$total = $session['voucher-total'];
+							$loyalityPoints = $merchant->getLoyaltyPoints()->all();
 
-							$clintLoyalityPoint->points += $loyalitypoint * $total;
-							$clintLoyalityPoint->save(false);
+							    if ( $loyalityPoints) {
 
-							$minimumLoyaltyPoints = \common\models\Option::getValByName('minimum_loyalty_points');
+								    if ($loyalityPoints['count_on_order']) {
 
-							if($clintLoyalityPoint->points >= $minimumLoyaltyPoints){
-							    EmailManager::customerLoyaltyPoints($model, $clintLoyalityPoint);
+									    $clintLoyalityPoint->points += $loyalityPoints['count_on_order'] * $loyalitypoint;
+									    $clintLoyalityPoint->save(false);
+									    $minimumLoyaltyPoints = \common\models\Option::getValByName('minimum_loyalty_points');
 
-							}
+									    if ($clintLoyalityPoint->points >= $minimumLoyaltyPoints) {
+										    EmailManager::customerLoyaltyPoints($model, $clintLoyalityPoint);
+
+									    }
+								    }
+							    }
+
 						    }
 
 						}

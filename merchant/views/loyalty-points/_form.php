@@ -34,6 +34,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'count_on_comment')->textInput() ?>
 
+    <?= $form->field($model, 'count_on_order')->textInput() ?>
+
     <?= $form->field($model, 'count_on_rate')->textInput() ?>
     </div>
     <div class="box-footer">

@@ -30,12 +30,12 @@ $this->context->menu = false;
 
                 ],
             ],
-            
+
                 'filterSelector' => "select[name='".$dataProvider->getPagination()->pageSizeParam."'],input[name='".$dataProvider->getPagination()->pageParam."']",
-            
+
                 'pager' => [
                     'class' => \liyunfang\pager\LinkPager::className(),
-                    
+
                     'prevPageLabel' => '<<',   // Set the label for the "previous" page button
                     'nextPageLabel' => '>>',   // Set the label for the "next" page button
                     'firstPageLabel'=>'First',   // Set the label for the "first" page button
@@ -59,11 +59,11 @@ $this->context->menu = false;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            
+
             'review:ntext',
             'rating',
-            
-            
+
+
             array(
                 'attribute' => 'status',
                 'filter' => array('1' => 'Yes', '0' => 'No'),
@@ -80,8 +80,17 @@ $this->context->menu = false;
             // 'punctuality_review',
             // 'courtesy_review',
 
-//            ['class' => 'yii\grid\ActionColumn', 
-//                'template' => '{update}{delete}'],
+            ['class' => 'yii\grid\ActionColumn',
+                'template' => '{update}',
+                'buttons' => [
+                    'update' => function ($url, $model) {
+                        return Html::a('<span class="glyphicon glyphicon-edit"></span>', '#', [
+                            'title' => Yii::t('yii', 'Update'),
+                            'data-pjax'=>'w0',
+                        ]);
+                    }
+                ]],
         ],
     ]); ?>
+
 </div>

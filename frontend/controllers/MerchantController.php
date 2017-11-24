@@ -2,6 +2,7 @@
 
 namespace frontend\controllers;
 
+use frontend\components\EmailManager;
 use frontend\models\MtMerchant;
 use frontend\models\MtMerchantCc;
 use frontend\models\MtPackages;
@@ -965,8 +966,7 @@ class MerchantController extends Controller
 
 		$model = MtMerchant::findOne(['slug' => $merchantId]);
 
-		if(is_numeric($id)&& count($model) == 0){
-			
+		if(is_numeric($id) && count($model) == 0){
 			$model = $this->findModel($id);
 		}else{
 			
@@ -1285,8 +1285,7 @@ class MerchantController extends Controller
         }
     }
     public static function actionCreateReview(){
-        
-    
+
        $model = new MtReview();
         
         $session = Yii::$app->session;
@@ -1296,12 +1295,32 @@ class MerchantController extends Controller
             $model->merchant_id = $session['id'];
             $model->client_id =Yii::$app->user->id;
             $model->date_created =strtotime('Now');
-           
+
+	        $merchant = \common\models\Merchant::findOne(['merchant_id' => $model->$session['id']]);
+	        $clientLoyalityPoint = \frontend\models\ClientLoyalityPoints::findOne(['client_id' => Yii::$app->user->id, 'merchant_id' => $session['id']]);
+
+	        $loyalityPoints = $merchant->getLoyaltyPoints()->all();
+
+	        if ( $loyalityPoints ) {
+
+		        if ( $loyalityPoints['count_on_comment'] ) {
+			        $loyalitypoint = \frontend\models\Option::getValByName('website_loyalty_points');
+			        $loyalitypoint = $loyalitypoint?$loyalitypoint:1;
+			        $clientLoyalityPoint->points += $loyalityPoints['count_on_comment'] * $loyalityPoints;
+			        $clientLoyalityPoint->save(false);
+			        $minimumLoyaltyPoints = \common\models\Option::getValByName('minimum_loyalty_points');
+
+			        if ( $clientLoyalityPoint->points >= $minimumLoyaltyPoints ) {
+				        EmailManager::customerLoyaltyPoints($model, $clientLoyalityPoint);
+
+			        }
+		        }
+	        }
         }
-        
-        
-        
-        return $this->render('create', [
+
+
+
+	    return $this->render('create', [
             'model' => $model,
             
         ]);

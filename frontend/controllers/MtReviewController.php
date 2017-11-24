@@ -63,46 +63,34 @@ class MtReviewController extends Controller
      */
     public function actionCreate(){
         if(Yii::$app->request->isAjax){
-            
-        $model = new MtReview();
-        if ($model->load(Yii::$app->request->post() )) {
-            
-            $model->client_id =Yii::$app->user->id;
-            $model->date_created = date('Y-m-d');
-            $food= $model->food_review;
-            $price= $model->price_review;
-            $punctuality=$model->punctuality_review;
-            $courtesy=$model->courtesy_review;
-            $average=($food+$price+$punctuality+$courtesy)/4;
-            $model->rating =$average;
-            $model->ip_address = '192.168.0.0';
-            $model->order_id = 'asdsa';
-            
-            if($model->validate()){
-            
-            $model->save();
-            
-            $merchantUrl = preg_replace('/\s+/', '',$model->merchant->service_name);
-            $merchantUrl = strtolower($merchantUrl).'-'.$model->merchant_id;
-            return $this->redirect(['merchant/view', 'id' => $merchantUrl]);
-        } else {
-            
-            
-             echo \yii\helpers\Json::encode(['success' => false, 'data' => $model->getErrors()]);
-                        Yii::$app->end();
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-           
+            $model = new MtReview();
+		    if ($model->load(Yii::$app->request->post() )) {
+		        $model->client_id =Yii::$app->user->id;
+		        $model->date_created = date('Y-m-d');
+		        $food= $model->food_review;
+		        $price= $model->price_review;
+		        $punctuality=$model->punctuality_review;
+		        $courtesy=$model->courtesy_review;
+		        $average=($food+$price+$punctuality+$courtesy)/4;
+		        $model->rating =$average;
+		        $model->ip_address = '192.168.0.0';
+		        $model->order_id = 'asdsa';
+
+		        if($model->validate()){
+			        $model->save();
+			        $merchantUrl = preg_replace('/\s+/', '',$model->merchant->service_name);
+			        $merchantUrl = strtolower($merchantUrl).'-'.$model->merchant_id;
+			        return $this->redirect(['merchant/view', 'id' => $merchantUrl]);
+		        } else {
+			        echo \yii\helpers\Json::encode(['success' => false, 'data' => $model->getErrors()]);
+			        Yii::$app->end();
+			        return $this->render('create', [
+			            'model' => $model,
+			        ]);
+		        }
+		    }
         }
-        
-        }
-            
-           
-            
-                }  
-        
-        }
+    }
     
 
     /**
