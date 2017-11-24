@@ -23,8 +23,8 @@ class Comment extends ActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return [
-			[['user_id',  'body'], 'required'],
-			[['user_id', 'review_id'], 'integer'],
+			[[  'body'], 'required'],
+			[['merchant_id','user_id', 'review_id'], 'integer'],
 			[['body'], 'string', 'max'=>500]
 		];
 	}
@@ -56,4 +56,21 @@ class Comment extends ActiveRecord
 		);
 	}
 
+	/**
+	 *  Get review with comments
+	 * @return \yii\db\ActiveQuery
+	 */
+	public function getClient ()
+	{
+		return $this->hasMany(Client::className(), ['client_id' => 'user_id']);
+	}
+
+	/**
+	 *  Get review with comments
+	 * @return \yii\db\ActiveQuery
+	 */
+	public function getMerchant ()
+	{
+		return $this->hasMany(Merchant::className(), ['merchant_id' => 'merchant_id']);
+	}
 }

@@ -534,12 +534,12 @@ $keyword = $session['keyword'];
                             $sql = "select * from mt_review where merchant_id=" . $model->id;
                             $query = Yii::$app->db->createCommand($sql)->queryAll();
                             $query = frontend\models\MtReview::find()->where(['merchant_id' => $model->id])->all();
-
 //                        echo '<pre>';
 //                        print_r($query);
 //                        exit;
                             if ($query) {
                                 foreach ($query as $data) {
+
 
                                     //echo'hello';
                                     ?>
@@ -590,7 +590,39 @@ $keyword = $session['keyword'];
                                         </div>
                                     </div>
 
+	                        <?php
 
+	                        if ( $data->comments ){
+	                        ?>
+		                        <div class="row">
+			                        <div class="col-md-12">
+				                        <div class="comments-list">
+					                        <?php
+					                        foreach($data->comments  as $comment){
+						                        $name = '';
+						                        if ($comment->merchant) {
+							                        $name = $comment->merchant[0]['service_name'];
+						                        } elseif ($comment->client) {
+							                        $name = $comment->client[0]->getfullName();
+						                        }
+						                        ?>
+						                        <div class="media">
+							                        <p class="pull-right"><small><?php echo date('d F, Y',strtotime($comment['created_at'])) ?></small></p>
+							                        <a class="media-left" href="#">
+<!--								                        <img src="--><?php //echo'/upload/merchant/'.$comment['photo'] ?><!--" style="width: 50px;">-->
+							                        </a>
+							                        <div class="media-body">
+
+								                        <h4 class="media-heading user_name"><?php echo $name ?></h4>
+								                        <?php echo $comment['body'] ?>
+
+								                                             <p><small><a href="">Comment</a></small></p>
+							                        </div>
+						                        </div>
+						                        <?php
+					                        }
+					                        }
+					                        ?>
                                 <?php
                                 }
                             }
@@ -599,8 +631,6 @@ $keyword = $session['keyword'];
                         </div>
 
                     </div>
-
-                </div>
 
 
 

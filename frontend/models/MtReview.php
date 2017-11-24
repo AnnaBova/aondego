@@ -2,6 +2,7 @@
 
 namespace frontend\models;
 
+use common\models\Comment;
 use Yii;
 
 /**
@@ -88,4 +89,14 @@ class MtReview extends \yii\db\ActiveRecord
     public function getMerchant(){
         return $this->hasOne(MtMerchant::className(),[ 'merchant_id'=> 'merchant_id']);
     }
+
+
+	/**
+	 *  Get review with comments
+	 * @return \yii\db\ActiveQuery
+	 */
+	public function getComments ()
+	{
+		return $this->hasMany(Comment::className(), ['review_id' => 'id']);
+	}
 }

@@ -86,11 +86,107 @@ $this->context->menu = false;
                     'update' => function ($url, $model) {
                         return Html::a('<span class="glyphicon glyphicon-edit"></span>', '#', [
                             'title' => Yii::t('yii', 'Update'),
-                            'data-pjax'=>'w0',
+                            'data-id'=> $model["id"],
+                            'data-body'=> $model["review"],
+                            'data-name'=> $model["name"],
+                            'class'=>"showreviewAnswer"
+                        ]);
+                    },
+                    'comments' => function ($url, $model) {
+                        return Html::a('<span class="glyphicon glyphicon-edit"></span>', '#', [
+                            'title' => Yii::t('yii', 'Update'),
+                            'data-id'=> $model["id"],
+                            'data-body'=> $model["review"],
+                            'data-name'=> $model["name"],
+                            'class'=>"showreviewAnswer"
+                        ]);
+                    }
+                ]],
+            ['class' => 'yii\grid\ActionColumn',
+                'template' => '{view}',
+                'buttons' => [
+                    'comments' => function ($url, $model) {
+                        return Html::a('<span class="glyphicon glyphicon-edit"></span>', '#', [
+                            'title' => Yii::t('yii', 'Update'),
+                            'data-id'=> $model["id"],
+                            'data-body'=> $model["review"],
+                            'data-name'=> $model["name"],
+                            'class'=>"showreviewAnswer"
                         ]);
                     }
                 ]],
         ],
-    ]); ?>
+    ]);
+    ?>
 
 </div>
+    <div class="modal fade" id="reviewAnswer" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" style="margin-top: 25%;">
+            <div class="modal-content modal-popup">
+                <div class='modal-header'>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class='modal-title'>
+                        <strong id="reviewClientName">Order status</strong>
+                    </h4>
+                </div>
+                <!-- / modal-header -->
+                <div class='modal-body'>
+                                <h4><i id="reviewText" style="max-height: 500px; overflow-y: scroll;"></i></h4>
+                    <hr>
+                                <textarea  rows="10" name="answerBody" data-id="<?php echo $status->stats_id ?>" style="width: 100%;"></textarea>
+                                <input type="hidden" id="reviewModalId">
+                </div>
+                <div class='modal-footer'>
+                    <div class="checkbox pull-right">
+                        <label>
+                            <button type="button" class="btn btn-default" id="saveAnswer">Save</button>
+                        </label>
+                    </div>
+                    <!--/ checkbox -->
+                </div>
+            </div>
+        </div>
+    </div>
+<?php
+$this->registerJs('
+    $("#w0").on("click",".showreviewAnswer", function (event) {
+        var body = $(this).attr("data-body");
+        var reviewId = $(this).attr("data-id");
+        var name = $(this).attr("data-name");
+        var modal = $("#reviewAnswer");
+        modal.find("#reviewText").text(body);
+        modal.find("#reviewClientName").text(name);
+        modal.find("#reviewModalId").val(reviewId);
+        modal.modal("show");
+    });
+     $("#reviewAnswer").on("hidden.bs.modal", function (e) {
+        $(this).find("#reviewText").text("");
+        $(this).find("#reviewClientName").text("");
+        $(this).find("[name=\'answerBody\']").val("");
+    })
+    
+    $("#saveAnswer").click(function(event){
+         var modal = $("#reviewAnswer");
+       var reviewId = modal.find("#reviewModalId").val();
+       var body = modal.find("[name=\'answerBody\']").val();
+         $.ajax({
+                    type : "get",
+                    url : "' . Yii::$app->urlManager->createUrl('comment/comment-review') . '",
+                    data : {reviewId : reviewId, body: body},
+                    success : function(response){
+                        response = JSON.parse(response);
+                        var resp = response;
+						if( resp.status == 200 ){
+						    modal.modal("hide");
+						}else{
+						console.log(response);
+						}
+					},
+                    error: function(err) {
+                        console.log(err);
+                    }
+                });
+        modal.modal("show");
+        console.log("sdf");
+    });
+');

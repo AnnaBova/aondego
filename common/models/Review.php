@@ -118,6 +118,6 @@ class Review extends ActiveRecord
 	 */
 	public function withComments ()
 	{
-		return $this->hasOne(Comment::className(), ['review_id' => 'review_id']);
+		return $this->hasMany(Comment::className(), ['review_id' => 'id']);
 	}
 }

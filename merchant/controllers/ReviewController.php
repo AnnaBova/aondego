@@ -39,8 +39,19 @@ class ReviewController extends \merchant\components\MerchantController
      */
     public function actionView($id)
     {
+	    $model = $this->findModel($id);
+	    $comments = Yii::$app->db->createCommand("SELECT c.body, m.service_name as name, g.file_name as photo, DATE_FORMAT(c.created_at, '%d %M, %Y') as created_at
+ 													from mt_review as r
+ 													join comments as c on r.id = c.review_id
+ 													join mt_merchant as m on c.merchant_id = m.merchant_id
+ 													join gallery_photo as g on m.gallery_id = g.gallery_id
+ 													GROUP BY c.id ASC;
+ 													where c.review_id=:id
+ 													");
+	    $comments= $comments->bindParam(':id', $id,  \PDO::PARAM_INT)->queryAll();
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
+            'comments' => $comments,
         ]);
     }
 
