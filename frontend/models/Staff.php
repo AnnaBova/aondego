@@ -23,7 +23,11 @@ use Yii;
  */
 class Staff extends \yii\db\ActiveRecord
 {
-    /**
+
+	const UPLOAD_DIR = 'staff';
+
+
+	/**
      * @inheritdoc
      */
     public static function tableName()
@@ -64,6 +68,17 @@ class Staff extends \yii\db\ActiveRecord
     {
         return $this->hasMany(AddonHasStaff::className(), ['staff_id' => 'id']);
     }
+
+	public function behaviors(){
+		return array(
+
+			'imageBehavior' => array(
+				'class' => \common\extensions\ImageBehavior::className(),
+				'imagePath' => self::UPLOAD_DIR,
+				'owner'     => $this
+			));
+
+	}
 
     /**
      * @return \yii\db\ActiveQuery
@@ -213,5 +228,9 @@ class Staff extends \yii\db\ActiveRecord
 	{   
 		return $this
 	   ->hasMany(StaffHasCategory::className(), ['staff_id' => 'id']);
+	}
+
+	public function getPrimaryKey($asArray = false) {
+		return $this->id;
 	}
 }

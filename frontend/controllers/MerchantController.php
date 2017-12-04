@@ -6,6 +6,7 @@ use frontend\components\EmailManager;
 use frontend\models\MtMerchant;
 use frontend\models\MtMerchantCc;
 use frontend\models\MtPackages;
+use frontend\models\Staff;
 use Yii;
 use yii\data\ActiveDataProvider;
 use yii\data\SqlDataProvider;
@@ -226,7 +227,7 @@ class MerchantController extends Controller
             if(isset($_POST['AddToCart']['serviceid'])){
                 $serviceId = $_POST['AddToCart']['serviceid'];
             }
-            
+
             $service = \frontend\models\CategoryHasMerchant::findOne(['id'=>$serviceId]);
             if($service->is_group == 1){
                 $addToCard  =  new \frontend\models\AddToCart();
@@ -364,13 +365,48 @@ class MerchantController extends Controller
                
                 
             }
-            
-            
-            
-            
+
+//and st.category_id=$serviceId
+
+	        $sql = "SELECT s.id, s.name, 
+						   s.description, 
+						   st.category_id as category_id, 
+						   GROUP_CONCAT(DISTINCT(a_s.addon_id)) as addon_ids
+                    FROM staff as s 
+					JOIN staff_has_category as st on s.id=st.staff_id
+					JOIN addon_has_staff as a_s on s.id=a_s.staff_id  
+				    WHERE s.is_active=1 and s.merchant_id=".$session['merchant_id']."
+				    group by s.id";
+
+	        $staffsArray = Yii::$app->db->createCommand($sql)->queryAll();
+	        $sql = "SELECT a.id as addon_id, a.name as addon_name, a.price as addon_price, a.time_in_minutes as addon_time 
+						FROM category_has_merchant as c_m 
+						JOIN merch_cat_has_addon as m on  c_m.id=m.m_c_id
+						JOIN addon as a on m.addon_id=a.id
+					    WHERE c_m.merchant_id=".$session['merchant_id']."
+					    and c_m.id=".$serviceId."
+					    GROUP by a.id 
+					    ";
+	        $addonArray =  Yii::$app->db->createCommand($sql)->queryAll();
+	        $addonArray = array_combine(array_column($addonArray,'addon_id'), $addonArray);
+	        $staffs = [];
+	        foreach ($staffsArray as $staffArray) {
+		        $addons = explode(',',$staffArray['addon_ids']);
+		        foreach ($addons as $addon){
+			        if(key_exists($addon,$addonArray)){
+				        $addonArray[$addon]['img'] = "/upload/addon/flowers-on-human-feet.svg";
+				        $staffArray['addons'][] = $addonArray[$addon];
+			        }
+		        }
+		        $staffArray['img'] = "/upload/staff/".$staffArray['id'].".jpg?lastmod=".time();
+		        $staffs[] = $staffArray;
+	        }
+//	        \yii\helpers\VarDumper::dump($staffs, 10, true);
+//	        die();
             if($service->is_group == 0){
                 return $this->renderAjax('service', [
                     'model' => $service,
+	                'staffs' => json_encode($staffs),
                     'addToCard' => $addToCard,
                     'update' => $update,
                     'updateArray' => $updateArray,
@@ -382,15 +418,16 @@ class MerchantController extends Controller
             }else if($service->is_group == 1){
                 return $this->renderAjax('service_group', [
                     'model' => $service,
+	                'staffs' => json_encode($staffs),
                     'addToCard' => $addToCard,
                     'update' => $update,
                     'updateArray' => $updateArray,
                     'key' => $key,
                     'discount' => $discount,
                     'couponPer' => $couponPer,
-			'merchant' => $merchant
+					'merchant' => $merchant
                 ]);
-                
+
             }
         }
     }
@@ -1017,7 +1054,8 @@ class MerchantController extends Controller
             'name' => 'keywords',
             'content' => Yii::t('custompage', MtMerchant::getSeo($model, $model->seo_keywords))
         ]);
-        
+
+
         return $this->render('view', [
             'model' => $model,
             'appointment' => $appointment,

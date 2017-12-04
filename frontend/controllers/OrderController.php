@@ -572,10 +572,10 @@ class OrderController extends Controller
 				$dd = Yii::t('basicfield', 'This day is free. Please select another day or staff member.');
 			}
 
-            $addOns = $this->renderAjax('_addons_single', ['addons' => $staff->addons, 'mcat' => $mcat]);
+//            $addOns = $this->renderAjax('_addons_single', ['addons' => $staff->addons, 'mcat' => $mcat]);
             $res = [
                 'dd' => $dd,
-                'add_ons' => $addOns
+//                'add_ons' => $addOns
 
             ];
 

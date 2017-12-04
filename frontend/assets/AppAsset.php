@@ -18,6 +18,7 @@ class AppAsset extends AssetBundle
         'css/animate.min.css',
         'css/menu.css',
         'css/style.css',
+        'css/carousel.css',
         'css/elegant_font/elegant_font.min.css',
         'css/fontello/css/fontello.min.css',
         'css/magnific-popup.css',
@@ -35,6 +36,7 @@ class AppAsset extends AssetBundle
     public $js = [
         'js/common_scripts_min.js',
         'js/functions.js',
+        'js/carousel.js',
         'js/ion.rangeSlider.js',
         'js/jquery.cookiebar.js',
         'http://maps.googleapis.com/maps/api/js?key=AIzaSyCZpettLYGwQxL4anPIYsRfJGa7ItzVEck',
